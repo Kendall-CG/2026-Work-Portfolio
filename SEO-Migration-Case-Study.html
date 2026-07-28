@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SEO &amp; URL Migration · Case Study · Kendall Casey-Green</title>
+<meta name="description" content="How Kendall Casey-Green re-architected thousands of URLs during a full website redesign of Jonathan Green — protecting years of domain authority and rebounding in organic search within two weeks of launch." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --bg:#0b1220;--ink:#eef1f6;--ink-2:#aab2c5;--muted:#8993a8;--muted-2:#6b7488;
+  --line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--surface:#111a2e;--surface-2:#1a2740;
+  --card:#141f38;--deep:#111a2e;
+  --accent:#d9a441;--btn:#d9a441;--btn-hover:#f0c169;--btn-ink:#171006;
+  --on-dark:#eef0f5;--on-dark-mut:#aab2c5;--on-dark-mut-2:#8a93a8;--dark-line:rgba(255,255,255,.09);
+  --container:1120px;--gutter:32px;--r:14px;
+  --ff-display:"Inter Tight",system-ui,sans-serif;--ff-body:"Inter",system-ui,sans-serif;--ff-mono:"JetBrains Mono",ui-monospace,monospace;
+  --gold:#d9a441;--gold-2:#f0c169;--green:oklch(0.72 0.15 152);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink-2);font-family:var(--ff-body);font-size:17px;line-height:1.6;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--gutter);width:100%;}
+.eyebrow{font-family:var(--ff-mono);font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;}
+.eyebrow::before{content:"";width:40px;height:1.5px;background:var(--gold);display:block;flex:none;}
+
+/* topbar */
+header.bar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .3s ease,border-color .3s ease;}
+header.bar.scrolled{background:color-mix(in srgb,var(--ink) 92%,transparent);border-bottom:1px solid rgba(255,255,255,0.14);}
+.bar.scrolled .back{color:#fff;}
+.bar.scrolled .btn.ghost{color:#fff;border-color:rgba(255,255,255,0.4);}
+.bar.scrolled .btn.ghost:hover{border-color:#fff;}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.back{display:inline-flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:600;font-size:16px;letter-spacing:-0.01em;}
+.back .ar{transition:transform .2s ease;}
+.back:hover .ar{transform:translateX(-3px);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-body);font-weight:600;font-size:14.5px;padding:10px 18px;border-radius:100px;border:1px solid var(--btn);background:var(--btn);color:var(--btn-ink);transition:transform .2s ease,background .2s ease,border-color .2s ease;}
+.btn:hover{transform:translateY(-1px);background:var(--btn-hover);border-color:var(--btn-hover);}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-2);}
+.btn.ghost:hover{border-color:var(--ink);}
+
+/* title + hero */
+.case-title{padding:72px 0 0;}
+.case-title .eyebrow{margin-bottom:26px;}
+.case-title h1{font-family:var(--ff-display);font-weight:700;font-size:clamp(34px,5vw,66px);line-height:1.0;letter-spacing:-0.035em;max-width:20ch;text-wrap:balance;color:var(--ink);}
+.hero-shot{margin:46px 0 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(24,42,77,0.35);background:#fff;}
+.hero-shot img{width:100%;height:auto;}
+.hero-cap{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);margin-top:16px;text-align:center;}
+
+/* overview */
+.overview{padding:60px 0 64px;margin-top:64px;border-top:1px solid var(--line);}
+.overview-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:48px;}
+.ov-k{font-family:var(--ff-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:16px;}
+.ov-obj p{color:var(--ink-2);font-size:16px;line-height:1.62;margin-bottom:14px;max-width:52ch;}
+.ov-obj p:last-child{margin-bottom:0;}
+.ov-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.ov-list li{font-size:15px;color:var(--ink-2);padding-left:18px;position:relative;}
+.ov-list li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--btn);}
+.ov-meta .v{font-size:15px;font-weight:500;line-height:1.4;margin-bottom:18px;}
+.ov-meta .v:last-child{margin-bottom:0;}
+.ov-meta .v a{border-bottom:1px solid var(--line-2);}
+.ov-meta .v a:hover{border-color:var(--ink);}
+.ov-meta .sub{display:block;font-family:var(--ff-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted-2);margin-top:2px;font-weight:400;}
+
+/* compare */
+.compare{padding:84px 0;border-top:1px solid var(--line);}
+.cmp-head{max-width:60ch;margin-bottom:44px;}
+.cmp-head .eyebrow{margin-bottom:22px;}
+.cmp-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.12;text-wrap:balance;color:var(--ink);}
+.cmp-head p{color:var(--muted);font-size:18px;margin-top:18px;}
+
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;grid-template-rows:repeat(5,auto);}
+.cmp-card{display:grid;grid-row:1 / span 5;grid-template-rows:subgrid;border-radius:18px;}
+.cmp-card.before{grid-column:1;background:var(--card);border:1px solid var(--line);}
+.cmp-card.after{grid-column:2;background:var(--deep);color:var(--on-dark);box-shadow:0 30px 60px -32px rgba(0,0,0,0.5);}
+.cmp-card > *{padding-left:30px;padding-right:30px;}
+
+.cmp-label{padding-top:28px;padding-bottom:22px;display:flex;flex-direction:column;gap:8px;}
+.cmp-label .tag{font-family:var(--ff-display);font-weight:700;font-size:32px;letter-spacing:-0.022em;display:flex;align-items:center;gap:12px;}
+.before .cmp-label .tag{color:var(--ink);}
+.after .cmp-label .tag{color:#fff;}
+.cmp-label .tag::before{content:"";width:12px;height:12px;border-radius:50%;flex:none;}
+.before .cmp-label .tag::before{background:#c08a3a;}
+.after .cmp-label .tag::before{background:oklch(0.7 0.13 150);}
+.cmp-label h3{font-family:var(--ff-display);font-weight:500;font-size:16px;letter-spacing:-0.008em;color:var(--muted);}
+.after .cmp-label h3{color:#aab2c5;}
+
+.cmp-shot{padding-bottom:26px;}
+.cmp-shot img,.cmp-shot image-slot{width:100%;height:auto;border-radius:10px;display:block;}
+.before .cmp-shot img{border:1px solid var(--line);}
+.after .cmp-shot image-slot,.after .cmp-shot img{border:1px solid var(--dark-line);}
+
+.cmp-block{padding-top:22px;padding-bottom:22px;}
+.before .cmp-block{border-top:1px solid var(--line);}
+.after .cmp-block{border-top:1px solid var(--dark-line);}
+.cmp-block h4{font-family:var(--ff-display);font-weight:600;font-size:18.5px;letter-spacing:-0.012em;margin-bottom:8px;color:var(--ink);}
+.after .cmp-block h4{color:#fff;}
+.before .cmp-block p{color:var(--muted);font-size:14.5px;line-height:1.52;}
+.after .cmp-block p{color:var(--on-dark-mut);font-size:14.5px;line-height:1.52;}
+.cmp-block .num{font-family:var(--ff-mono);font-size:11px;letter-spacing:0.06em;margin-bottom:10px;display:block;}
+.before .cmp-block .num{color:var(--muted-2);}
+.after .cmp-block .num{color:#9aa6bd;}
+
+/* gallery */
+.gallery{padding:84px 0;border-top:1px solid var(--line);}
+.gal-head{max-width:60ch;margin-bottom:40px;}
+.gal-head .eyebrow{margin-bottom:22px;}
+.gal-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.12;text-wrap:balance;color:var(--ink);}
+.gal-head p{color:var(--muted);font-size:18px;margin-top:18px;}
+.gal-glabel{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted-2);margin:52px 0 18px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+
+/* url + canonical example cards */
+.url-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
+.url-row{display:flex;flex-direction:column;gap:5px;padding:16px 0;}
+.url-row + .url-row{border-top:1px solid var(--line);}
+.url-tag{font-family:var(--ff-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;display:inline-flex;align-items:center;gap:8px;}
+.url-tag.old{color:#d9846a;}
+.url-tag.new{color:oklch(0.72 0.14 150);}
+.url-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;display:block;}
+.url-val{font-family:var(--ff-mono);font-size:14.5px;color:var(--ink);word-break:break-all;line-height:1.5;}
+.url-val s{color:var(--muted-2);text-decoration-color:#c98e72;}
+.url-note{font-size:14px;color:var(--muted);margin-top:18px;line-height:1.55;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+
+/* checklist */
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 32px;}
+.check{display:flex;gap:14px;align-items:flex-start;padding:6px 0;}
+.check .ic{flex:none;width:22px;height:22px;border-radius:50%;background:oklch(0.72 0.13 150 / 0.2);color:oklch(0.78 0.15 150);display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:1px;}
+.check .ct{font-size:15px;color:var(--ink-2);line-height:1.45;}
+.check .ct b{font-weight:600;color:var(--ink);}
+
+/* results */
+.results{background:var(--deep);color:var(--on-dark);padding:78px 0;}
+.results .eyebrow{color:#9aa6bd;}
+.results .eyebrow::before{background:#5b6b8c;}
+.results-lead{font-family:var(--ff-display);font-weight:500;font-size:clamp(21px,2.5vw,29px);line-height:1.32;letter-spacing:-0.015em;color:#fff;margin-top:20px;max-width:46ch;text-wrap:pretty;}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:48px;}
+.res{border-top:1px solid var(--dark-line);padding-top:22px;}
+.res .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(38px,4.6vw,58px);letter-spacing:-0.035em;color:#fff;line-height:1;}
+.res .l{font-size:15px;color:#cfd5e0;margin-top:12px;font-weight:500;}
+.res .d{font-family:var(--ff-mono);font-size:10.5px;color:var(--on-dark-mut-2);margin-top:8px;text-transform:uppercase;letter-spacing:0.06em;}
+
+/* end cta */
+.endcta{padding:96px 0;border-top:1px solid var(--line);text-align:center;}
+.endcta h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(30px,4.4vw,56px);letter-spacing:-0.03em;line-height:1.02;margin-bottom:32px;text-wrap:balance;color:var(--ink);}
+.endcta .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+footer{border-top:1px solid var(--line);padding:36px 0;}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);}
+
+.roadmap{padding:84px 0;border-top:1px solid var(--line);}
+.road-head{max-width:60ch;margin-bottom:44px;}
+.road-head .eyebrow{margin-bottom:22px;}
+.road-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.12;text-wrap:balance;color:var(--ink);}
+.road-head p{color:var(--muted);font-size:18px;margin-top:18px;}
+.road-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+.road-step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;}
+.road-step .rn{font-family:var(--ff-mono);font-size:11px;color:var(--muted-2);letter-spacing:0.08em;margin-bottom:14px;}
+.road-step h4{font-family:var(--ff-display);font-weight:600;font-size:17px;letter-spacing:-0.012em;margin-bottom:10px;color:var(--ink);}
+.road-step p{color:var(--muted);font-size:14px;line-height:1.5;}
+
+.exec{padding:0 0 64px;}
+.exec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+.exec-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;}
+.exec-card .ek{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted-2);margin-bottom:10px;}
+.exec-card .ev{font-family:var(--ff-display);font-weight:600;font-size:22px;letter-spacing:-0.015em;color:var(--ink);}
+
+.lessons{padding:84px 0;border-top:1px solid var(--line);}
+.less-head{max-width:60ch;margin-bottom:40px;}
+.less-head .eyebrow{margin-bottom:22px;}
+.less-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.12;text-wrap:balance;color:var(--ink);}
+.less-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.less-card{background:var(--deep);color:var(--on-dark);border-radius:14px;padding:28px 26px;}
+.less-card h4{font-family:var(--ff-display);font-weight:600;font-size:19px;letter-spacing:-0.015em;margin-bottom:10px;color:#fff;}
+.less-card p{font-size:14.5px;color:var(--on-dark-mut);line-height:1.55;}
+
+@media(max-width:900px){
+  .road-grid{grid-template-columns:1fr 1fr;}
+  .exec-grid,.less-grid{grid-template-columns:1fr;}
+}
+@media(max-width:809px){
+  :root{--gutter:20px;}
+  .case-title{padding:44px 0 0;}
+  .hero-shot{margin-top:32px;}
+  .overview{padding:48px 0;margin-top:48px;}
+  .overview-grid{grid-template-columns:1fr;gap:30px;}
+  .roadmap,.lessons{padding:60px 0;}
+  .road-grid{grid-template-columns:1fr;}
+  .cmp-grid{grid-template-columns:1fr;row-gap:24px;grid-template-rows:none;}
+  .cmp-card{grid-column:1 !important;grid-row:auto;grid-template-rows:none;display:block;}
+  .two,.check-grid{grid-template-columns:1fr;}
+  .results-grid{grid-template-columns:1fr 1fr;gap:28px;}
+}
+@media(max-width:520px){
+  .results-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="back" href="Kendall%20Portfolio.html#work"><span class="ar">←</span> Kendall Casey-Green</a>
+    <a class="btn ghost" href="https://www.jonathangreen.com/" target="_blank" rel="noopener">Visit live site ↗</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- TITLE + HERO -->
+  <section class="case-title" data-screen-label="Case Hero">
+    <div class="wrap">
+      <div class="eyebrow">Case Study · SEO &amp; URL Migration</div>
+      <h1>How I re-architected the site's URLs mid-redesign — without losing our rankings.</h1>
+    </div>
+    <div class="wrap">
+      <div class="hero-shot">
+        <img src="images/seo-migration-gsc-trend.jpg" alt="Google Search Console trend line showing 130K total clicks and 4.78M total impressions, with markers for the new site launch and a full rebound two weeks post-launch" />
+      </div>
+      <div class="hero-cap">Google Search Console · clicks &amp; impressions through launch and a two-week rebound</div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="overview" data-screen-label="Overview">
+    <div class="wrap">
+      <div class="overview-grid">
+        <div class="ov-obj">
+          <div class="ov-k">Objective</div>
+          <p>An SEO migration is the high-wire act of changing a site's URLs — and everything search engines have learned to trust about them — without losing the rankings and organic traffic the business runs on.</p>
+          <p>Jonathan Green needed a modern site with a UX that converted far better than the old one. I used that redesign as the moment to also re-architect a dated, messy URL structure — restructuring thousands of URLs and protecting years of hard-won domain authority in a single launch.</p>
+          <p>The risk was real: most of the site's revenue came from organic search, and changing this many URLs at once could have erased it. Instead, the site rebounded within two weeks.</p>
+        </div>
+        <div>
+          <div class="ov-k">The work</div>
+          <ul class="ov-list">
+            <li>URL Architecture &amp; Strategy</li>
+            <li>301 Redirect Mapping</li>
+            <li>Canonicalization &amp; Canonical Tags</li>
+            <li>Metadata &amp; Title Tag Migration</li>
+            <li>XML Sitemaps &amp; Robots.txt</li>
+            <li>GA4 Conversion Tracking</li>
+            <li>Technical QA &amp; Reindexing</li>
+          </ul>
+        </div>
+        <div class="ov-meta">
+          <div class="ov-k">Details</div>
+          <div class="v">Organic Search · Google<span class="sub">Channel</span></div>
+          <div class="v">Full site redesign &amp; migration<span class="sub">Scope</span></div>
+          <div class="v"><a href="https://www.jonathangreen.com/" target="_blank" rel="noopener">jonathangreen.com ↗</a><span class="sub">Website</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="exec" data-screen-label="Executive Summary">
+    <div class="wrap">
+      <div class="exec-grid">
+        <div class="exec-card"><div class="ek">SEO</div><div class="ev">Protected</div></div>
+        <div class="exec-card"><div class="ek">UX</div><div class="ev">Modernized</div></div>
+        <div class="exec-card"><div class="ek">Foundation</div><div class="ev">Built for growth</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE / BUILT -->
+  <section class="compare" data-screen-label="Challenge and Solution">
+    <div class="wrap">
+      <div class="cmp-head">
+        <div class="eyebrow">The challenge &amp; the work</div>
+        <h2>A better site, without throwing away the SEO behind it.</h2>
+        <p>Each thing putting the migration at risk, lined up against what I did to protect it.</p>
+      </div>
+
+      <div class="cmp-grid">
+        <!-- BEFORE CARD -->
+        <div class="cmp-card before">
+          <div class="cmp-label">
+            <span class="tag">Before</span>
+            <h3>A modern redesign on a shaky SEO foundation</h3>
+          </div>
+          <div class="cmp-shot">
+            <img src="images/old-homepage-full.png" alt="The old Jonathan Green website" />
+          </div>
+          <div class="cmp-block">
+            <span class="num">01</span>
+            <h4>Dated .html URLs</h4>
+            <p>Every URL still ended in “.html” — a legacy structure that looked outdated and limited how the site could grow.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">02</span>
+            <h4>A structure bots couldn't follow</h4>
+            <p>The URL hierarchy didn't reflect the site, and duplicate variations competed against each other — splitting ranking signal.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">03</span>
+            <h4>A redesign that risked everything</h4>
+            <p>Changing thousands of URLs at once threatened years of domain authority — and the organic traffic that drove most of our revenue.</p>
+          </div>
+        </div>
+
+        <!-- AFTER CARD -->
+        <div class="cmp-card after">
+          <div class="cmp-label">
+            <span class="tag">After</span>
+            <h3>A clean architecture, migrated without losing ground</h3>
+          </div>
+          <div class="cmp-shot">
+            <img src="images/new-homepage.png" alt="The new, redesigned Jonathan Green website" />
+          </div>
+          <div class="cmp-block">
+            <span class="num">01</span>
+            <h4>Re-architected the URL structure</h4>
+            <p>Replaced “.html” URLs with a clean, hierarchical structure that mirrors the site and gives Google a clear map to crawl.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">02</span>
+            <h4>Redirects &amp; canonicals, everywhere</h4>
+            <p>A 301 for every changed URL, plus canonical tags that roll variations up to one URL of truth — ending dead ends and duplicate content.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">03</span>
+            <h4>Protected years of authority</h4>
+            <p>Kept the www domain to salvage backlink equity, migrated every title tag and 150+ meta descriptions, and verified the dev noindex was removed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results" data-screen-label="Results">
+    <div class="wrap">
+      <div class="eyebrow">The results</div>
+      <p class="results-lead">We re-architected thousands of URLs in a single launch and rebounded within two weeks — protecting the organic search that drives most of the site's revenue.</p>
+      <div class="results-grid">
+        <div class="res"><div class="n">2 wks</div><div class="l">To full rebound</div><div class="d">After launch</div></div>
+        <div class="res"><div class="n">4.78M</div><div class="l">Total impressions</div><div class="d">Organic search</div></div>
+        <div class="res"><div class="n">130K</div><div class="l">Total clicks</div><div class="d">Organic search</div></div>
+        <div class="res"><div class="n">2.7%</div><div class="l">Average CTR</div><div class="d">Organic search</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIGRATION STRATEGY -->
+  <section class="roadmap" data-screen-label="Migration Strategy">
+    <div class="wrap">
+      <div class="road-head">
+        <div class="eyebrow">The migration strategy</div>
+        <h2>A five-step roadmap for changing everything without losing anything.</h2>
+        <p>Redesigns fail their SEO in the gap between "looks great" and "still ranks." This is how I closed it.</p>
+      </div>
+      <div class="road-grid">
+        <div class="road-step"><div class="rn">Step 01</div><h4>SEO audit</h4><p>Documented every ranking page, its metadata, internal links, and crawl health before development touched anything.</p></div>
+        <div class="road-step"><div class="rn">Step 02</div><h4>URL architecture</h4><p>Re-mapped the hierarchy to drop dated “.html” URLs and mirror the new site, while preserving topical authority.</p></div>
+        <div class="road-step"><div class="rn">Step 03</div><h4>301 redirect strategy</h4><p>Mapped every legacy URL to its closest new equivalent to carry link equity across the migration.</p></div>
+        <div class="road-step"><div class="rn">Step 04</div><h4>Technical QA</h4><p>Validated redirects, canonicals, sitemaps, robots.txt, and indexability before launch — and again after.</p></div>
+        <div class="road-step"><div class="rn">Step 05</div><h4>Post-launch monitoring</h4><p>Watched Search Console daily to catch and fix migration issues fast, instead of after they cost rankings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" data-screen-label="Inside the migration">
+    <div class="wrap">
+      <div class="gal-head">
+        <div class="eyebrow">Inside the migration</div>
+        <h2>Changing the URLs without losing the rankings.</h2>
+        <p>The moves that let us re-architect the whole site and rebound fast.</p>
+      </div>
+
+      <div class="gal-glabel">Re-architecting the URLs</div>
+      <div class="two">
+        <div class="url-card">
+          <div class="url-row">
+            <span class="url-tag old">Before · legacy .html</span>
+            <span class="url-val"><s>jonathangreen.com/black-beauty-ultra.html</s></span>
+          </div>
+          <div class="url-row">
+            <span class="url-tag new">After · clean hierarchy</span>
+            <span class="url-val">jonathangreen.com/product/black-beauty-ultra-grass-seed/</span>
+          </div>
+          <p class="url-note">The new structure drops the dated “.html,” nests pages by type, and gives Google a hierarchy it can actually crawl and trust.</p>
+        </div>
+        <div class="url-card">
+          <div class="url-row">
+            <span class="url-tag new">Canonical · the one indexed URL</span>
+            <span class="url-val">…/product/black-beauty-dense-shade-grass-seed/</span>
+          </div>
+          <div class="url-row">
+            <span class="url-tag old">Variation · points to the canonical</span>
+            <span class="url-val">…/black-beauty-dense-shade-grass-seed/<wbr />?attribute_pa_weight=3-lb</span>
+          </div>
+          <p class="url-note">Canonical tags roll every size and weight variation up to a single URL of truth, so variations stop competing with each other in search.</p>
+        </div>
+      </div>
+
+      <div class="gal-glabel">The migration checklist</div>
+      <div class="check-grid">
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Mapped &amp; QA'd every 301 redirect</b> so users and Google land where they should — including stragglers found after launch.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Canonicalized the whole domain</b> to a single https://www. version to preserve backlink equity.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Reviewed canonical tags sitewide</b> to end duplicate content from product variations.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Verified the dev noindex was removed</b> so the new site could actually be indexed at launch.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Migrated title tags &amp; 150+ meta descriptions</b> to keep the signals Google already rewarded.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Resubmitted XML sitemaps</b> in Google Search Console to hand Google a clean list of live URLs.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Reviewed &amp; updated robots.txt</b> to focus crawl budget on the pages that matter most.</span></div>
+        <div class="check"><span class="ic">✓</span><span class="ct"><b>Re-verified GA4 conversion &amp; revenue tracking</b> so every channel kept reporting accurately post-launch.</span></div>
+      </div>
+
+      <div class="gal-glabel">The proof — Search Console through launch</div>
+      <div class="url-card" style="padding:22px;">
+        <img src="images/seo-migration-gsc-trend.jpg" alt="Google Search Console trend line: clicks and impressions climbing into launch, dipping briefly, then rebounding two weeks after the new site launched" style="width:100%;border-radius:8px;border:1px solid var(--line);" />
+        <p class="url-note" style="text-align:center;margin-top:16px;">A brief, expected dip at launch — then a clear positive trajectory just two weeks after the new site went live.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS LEARNED -->
+  <section class="lessons" data-screen-label="Lessons Learned">
+    <div class="wrap">
+      <div class="less-head">
+        <div class="eyebrow">Lessons learned</div>
+        <h2>Website redesigns are SEO projects.</h2>
+      </div>
+      <div class="less-grid">
+        <div class="less-card"><h4>Preparation wins migrations</h4><p>Almost every migration failure happens before launch, not after — in the redirect map and the QA pass no one wanted to do.</p></div>
+        <div class="less-card"><h4>Every design choice is an SEO choice</h4><p>Navigation, URL structure, and content hierarchy all affect discoverability, not just how the site looks.</p></div>
+        <div class="less-card"><h4>The best migrations go unnoticed</h4><p>Users and Google shouldn't feel the seams. A rebound in two weeks means the plan held.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END CTA -->
+  <section class="endcta" data-screen-label="End CTA">
+    <div class="wrap">
+      <h2>Explore the live site, or see more work.</h2>
+      <div class="actions">
+        <a class="btn" href="https://www.jonathangreen.com/" target="_blank" rel="noopener">See the live site ↗</a>
+        <a class="btn ghost" href="Kendall%20Portfolio.html#work">Back to portfolio</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 Kendall Casey-Green · Austin, Texas</span>
+    <span>Jonathan Green · SEO &amp; URL Migration Case Study</span>
+  </div>
+</footer>
+
+<script>
+(function(){var bar=document.querySelector('header.bar');if(!bar)return;var on=function(){bar.classList.toggle('scrolled',window.scrollY>40);};on();window.addEventListener('scroll',on,{passive:true});})();
+</script>
+
+</body>
+</html>
