@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Amazon Marketplace · Case Study · Kendall Casey-Green</title>
+<meta name="description" content="A look at how Kendall Casey-Green owned an Amazon Marketplace channel for Jonathan Green, growing it ~43% a year for three years to $10.56M annually and $23.1M cumulative, while improving ROAS from 5.57x to 8.07x." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --bg:#f6f4ec;--ink:#182a4d;--ink-2:#27395d;--muted:#5d6678;--muted-2:#9aa0ad;
+  --line:#e6e2d8;--line-2:#dcd8cc;--surface:#efece3;--surface-2:#e8e4d9;
+  --card:#fffdf7;
+  --accent:#182a4d;--btn:#d49a3c;--btn-hover:#c4892f;--btn-ink:#17243d;
+  --on-dark:#eef0f5;--on-dark-mut:#aab2c5;--on-dark-mut-2:#8a93a8;--dark-line:rgba(255,255,255,0.12);--green:oklch(0.72 0.13 150);
+  --container:1120px;--gutter:32px;--r:14px;
+  --ff-display:"Inter Tight",system-ui,sans-serif;--ff-body:"Inter",system-ui,sans-serif;--ff-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--ff-body);font-size:17px;line-height:1.6;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--gutter);width:100%;}
+.eyebrow{font-family:var(--ff-mono);font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:14px;}
+.eyebrow::before{content:"";width:40px;height:1.5px;background:var(--ink);display:block;flex:none;}
+
+/* topbar */
+header.bar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .3s ease,border-color .3s ease;}
+header.bar.scrolled{background:color-mix(in srgb,var(--ink) 92%,transparent);border-bottom-color:rgba(255,255,255,0.14);}
+.bar.scrolled .back{color:#fff;}
+.bar.scrolled .btn.ghost{color:#fff;border-color:rgba(255,255,255,0.4);}
+.bar.scrolled .btn.ghost:hover{border-color:#fff;}
+.bar-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.back{display:inline-flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:600;font-size:16px;letter-spacing:-0.01em;}
+.back .ar{transition:transform .2s ease;}
+.back:hover .ar{transform:translateX(-3px);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-body);font-weight:600;font-size:14.5px;padding:10px 18px;border-radius:100px;border:1px solid var(--btn);background:var(--btn);color:var(--btn-ink);transition:transform .2s ease,background .2s ease,border-color .2s ease;}
+.btn:hover{transform:translateY(-1px);background:var(--btn-hover);border-color:var(--btn-hover);}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-2);}
+.btn.ghost:hover{border-color:var(--ink);}
+
+/* title + hero */
+.case-title{padding:72px 0 0;}
+.case-title .eyebrow{margin-bottom:26px;}
+.case-title h1{font-family:var(--ff-display);font-weight:700;font-size:clamp(34px,5vw,66px);line-height:1.0;letter-spacing:-0.035em;max-width:20ch;text-wrap:balance;}
+.hero-shot{margin:46px 0 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(24,42,77,0.35);}
+.hero-shot img{width:100%;height:auto;}
+
+/* hero growth band (1a) */
+.gb-band{background:var(--ink);color:var(--on-dark);border-radius:var(--r);padding:48px 50px;margin:46px 0 0;box-shadow:0 30px 60px -30px rgba(24,42,77,0.35);}
+.gb-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:42px;}
+.gb-eye{font-family:var(--ff-mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-dark-mut);}
+.gb-head h2{font-family:var(--ff-display);font-weight:600;font-size:clamp(26px,3vw,40px);letter-spacing:-0.03em;line-height:1.05;margin-top:16px;max-width:18ch;color:#fff;}
+.gb-head h2 em{font-style:normal;color:var(--btn);}
+.gb-cum{text-align:right;flex:none;}
+.gb-cum .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(30px,3.4vw,46px);letter-spacing:-0.03em;line-height:1;color:#fff;}
+.gb-cum .l{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--on-dark-mut);margin-top:8px;}
+.gb-chart{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;align-items:end;}
+.gb-col{display:flex;flex-direction:column;align-items:center;}
+.gb-col .val{font-family:var(--ff-display);font-weight:600;font-size:26px;letter-spacing:-0.02em;margin-bottom:14px;color:#fff;}
+.gb-col .yoy{font-family:var(--ff-mono);font-size:12px;color:var(--green);margin-bottom:10px;}
+.gb-col .yoy.flat{color:var(--on-dark-mut-2);}
+.gb-plot{height:200px;width:100%;display:flex;align-items:flex-end;justify-content:center;}
+.gb-bar{width:100%;max-width:150px;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#33508a,#21386a);}
+.gb-bar.lead{background:linear-gradient(180deg,#e7b25c,#d49a3c);}
+.gb-col .yr{font-family:var(--ff-mono);font-size:13px;color:var(--on-dark-mut);margin-top:16px;padding-top:14px;border-top:1px solid var(--dark-line);width:100%;text-align:center;}
+.gb-col .ord{font-size:12.5px;font-weight:600;color:var(--on-dark-mut-2);margin-top:4px;}
+@media(max-width:640px){.gb-band{padding:30px 24px;}.gb-plot{height:150px;}}
+
+/* overview */
+.overview{padding:60px 0 64px;margin-top:64px;border-top:1px solid var(--line);}
+.overview-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:48px;}
+.ov-k{font-family:var(--ff-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#3f4a5e;margin-bottom:16px;}
+.ov-obj p{color:var(--ink-2);font-size:16px;line-height:1.62;margin-bottom:14px;max-width:52ch;}
+.ov-obj p:last-child{margin-bottom:0;}
+.ov-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.ov-list li{font-size:15px;color:var(--ink-2);padding-left:18px;position:relative;}
+.ov-list li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--btn);}
+.ov-meta .v{font-size:15px;font-weight:500;line-height:1.4;margin-bottom:18px;}
+.ov-meta .v:last-child{margin-bottom:0;}
+.ov-meta .v a{border-bottom:1px solid var(--line-2);}
+.ov-meta .v a:hover{border-color:var(--ink);}
+.ov-meta .sub{display:block;font-family:var(--ff-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted-2);margin-top:2px;font-weight:400;}
+
+/* compare */
+.compare{padding:84px 0;border-top:1px solid var(--line);}
+.cmp-head{max-width:60ch;margin-bottom:44px;}
+.cmp-head .eyebrow{margin-bottom:22px;}
+.cmp-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.12;text-wrap:balance;}
+.cmp-head p{color:var(--muted);font-size:18px;margin-top:18px;}
+
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;grid-template-rows:repeat(5,auto);}
+.cmp-card{display:grid;grid-row:1 / span 5;grid-template-rows:subgrid;border-radius:18px;}
+.cmp-card.before{grid-column:1;background:var(--card);border:1px solid var(--line);}
+.cmp-card.after{grid-column:2;background:var(--ink);color:var(--on-dark);box-shadow:0 30px 60px -32px rgba(24,42,77,0.5);}
+.cmp-card > *{padding-left:30px;padding-right:30px;}
+
+.cmp-label{padding-top:28px;padding-bottom:22px;display:flex;flex-direction:column;gap:8px;}
+.cmp-label .tag{font-family:var(--ff-display);font-weight:700;font-size:32px;letter-spacing:-0.022em;display:flex;align-items:center;gap:12px;}
+.before .cmp-label .tag{color:var(--ink);}
+.after .cmp-label .tag{color:#fff;}
+.cmp-label .tag::before{content:"";width:12px;height:12px;border-radius:50%;flex:none;}
+.before .cmp-label .tag::before{background:#c08a3a;}
+.after .cmp-label .tag::before{background:oklch(0.7 0.13 150);}
+.cmp-label h3{font-family:var(--ff-display);font-weight:500;font-size:16px;letter-spacing:-0.008em;color:var(--muted);}
+.after .cmp-label h3{color:#aab2c5;}
+
+.cmp-shot{padding-bottom:26px;}
+.cmp-shot img,.cmp-shot image-slot{width:100%;height:360px;object-fit:cover;object-position:top;border-radius:10px;display:block;}
+.before .cmp-shot img{border:1px solid var(--line);}
+.after .cmp-shot image-slot,.after .cmp-shot img{border:1px solid var(--dark-line);}
+
+.cmp-block{padding-top:22px;padding-bottom:22px;}
+.before .cmp-block{border-top:1px solid var(--line);}
+.after .cmp-block{border-top:1px solid var(--dark-line);}
+.cmp-block h4{font-family:var(--ff-display);font-weight:600;font-size:18.5px;letter-spacing:-0.012em;margin-bottom:8px;}
+.after .cmp-block h4{color:#fff;}
+.before .cmp-block p{color:var(--muted);font-size:14.5px;line-height:1.52;}
+.after .cmp-block p{color:var(--on-dark-mut);font-size:14.5px;line-height:1.52;}
+.cmp-block .num{font-family:var(--ff-mono);font-size:11px;letter-spacing:0.06em;margin-bottom:10px;display:block;}
+.before .cmp-block .num{color:var(--muted-2);}
+.after .cmp-block .num{color:#9aa6bd;}
+
+/* gallery */
+.gallery{padding:84px 0;border-top:1px solid var(--line);}
+.gal-head{max-width:60ch;margin-bottom:40px;}
+.gal-head .eyebrow{margin-bottom:22px;}
+.gal-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.12;text-wrap:balance;}
+.gal-head p{color:var(--muted);font-size:18px;margin-top:18px;}
+.gal-row{margin-top:22px;}
+.gal-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px;}
+.gal-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px;}
+.gal-item img,.gal-item image-slot{width:100%;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);display:block;}
+.gal-item.framed img{height:auto;}
+.gal-item .pageshot{aspect-ratio:16/9;object-fit:cover;}
+.gal-item image-slot{aspect-ratio:16/10;}
+.gal-cap{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);margin-top:12px;display:flex;gap:8px;align-items:baseline;line-height:1.4;}
+.gal-cap a{color:var(--ink);border-bottom:1px solid var(--line-2);}
+.gal-cap a:hover{border-color:var(--ink);}
+.vrow{display:grid;grid-template-columns:0.82fr 1.18fr;gap:50px;align-items:center;margin-top:60px;}
+.vrow.reverse .vtext{order:2;}
+.vrow .vnum{font-family:var(--ff-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--btn);}
+.vrow .vtext h3{font-family:var(--ff-display);font-weight:600;font-size:clamp(22px,2.6vw,30px);letter-spacing:-0.02em;line-height:1.1;margin-top:14px;}
+.vrow .vtext p{color:var(--muted);font-size:16px;line-height:1.6;margin-top:14px;max-width:42ch;}
+.vmedia{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -34px rgba(24,42,77,0.45);background:#000;}
+.vmedia video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;}
+.vmedia.portrait{display:flex;justify-content:center;align-items:center;padding:22px;}
+.vmedia.portrait video{width:auto;height:520px;max-height:72vh;aspect-ratio:9/16;object-fit:contain;border-radius:18px;}
+.gal-glabel{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-2);margin:52px 0 18px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+.laptop-stage{margin-top:6px;padding:30px 0 8px;}
+.laptop{max-width:900px;margin:0 auto;}
+.laptop-screen{position:relative;background:#16171a;border:1px solid #2c2e33;border-radius:18px 18px 7px 7px;padding:15px;box-shadow:0 44px 80px -34px rgba(24,42,77,0.5);}
+.laptop-screen::before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:#34363b;}
+.laptop-screen img{width:100%;display:block;border-radius:4px;}
+.laptop-base{position:relative;width:114%;height:15px;margin:0 -7%;background:linear-gradient(#dfe1e6,#b4b8c1);border-radius:0 0 13px 13px;box-shadow:0 26px 26px -20px rgba(0,0,0,0.45);}
+.laptop-base::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:104px;height:8px;background:#a9adb6;border-radius:0 0 9px 9px;}
+.laptop-cap{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);margin-top:22px;text-align:center;}
+.gal-2 .span-2{grid-column:1 / -1;}
+.gal-video{display:flex;justify-content:center;margin-top:22px;}
+.gal-video video{width:100%;max-width:760px;max-height:560px;border-radius:var(--r);border:1px solid var(--line);box-shadow:0 30px 60px -34px rgba(24,42,77,0.45);background:#000;object-fit:contain;display:block;}
+.results-lead{font-family:var(--ff-display);font-weight:600;font-size:clamp(32px,4.4vw,52px);line-height:1.12;letter-spacing:-0.025em;color:#fff;margin-top:24px;max-width:22ch;text-wrap:balance;}
+.flip-feature{margin-top:8px;}
+.flip{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);cursor:pointer;display:block;background:var(--surface);}
+.flip .face{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top center;}
+.flip image-slot.face{display:block;width:100%;aspect-ratio:16/9;}
+.flip .back{position:absolute;inset:0;opacity:0;transition:opacity .4s ease;}
+.flip:hover .back,.flip:focus-within .back,.flip:active .back{opacity:1;}
+.flip .fbadge{position:absolute;top:13px;left:13px;z-index:4;font-family:var(--ff-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;padding:6px 11px;border-radius:100px;transition:opacity .3s ease;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+.flip .fbadge.now{background:rgba(24,42,77,0.92);color:#fff;}
+.flip .fbadge.then{background:rgba(255,255,255,0.94);color:var(--ink);opacity:0;}
+.flip:hover .fbadge.now,.flip:focus-within .fbadge.now,.flip:active .fbadge.now{opacity:0;}
+.flip:hover .fbadge.then,.flip:focus-within .fbadge.then,.flip:active .fbadge.then{opacity:1;}
+.flips-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px;}
+.fhint{font-family:var(--ff-mono);font-size:12px;color:var(--muted);margin:0 0 2px;}
+@media(max-width:809px){.flips-2{grid-template-columns:1fr;}}
+
+/* results */
+.results{background:var(--ink);color:var(--on-dark);padding:78px 0;}
+.results .eyebrow{color:#9aa6bd;}
+.results .eyebrow::before{background:#5b6b8c;}
+.results h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(24px,3vw,34px);letter-spacing:-0.02em;margin-top:20px;max-width:24ch;color:#fff;text-wrap:balance;}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:48px;}
+.res{border-top:1px solid var(--dark-line);padding-top:22px;}
+.res .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(38px,4.6vw,58px);letter-spacing:-0.035em;color:#fff;line-height:1;}
+.res .l{font-size:15px;color:#cfd5e0;margin-top:12px;font-weight:500;}
+.res .d{font-family:var(--ff-mono);font-size:10.5px;color:var(--on-dark-mut-2);margin-top:8px;text-transform:uppercase;letter-spacing:0.06em;}
+
+/* method (1d) + efficiency (1b) */
+.method{padding:30px 0 0;}
+.efficiency{padding:30px 0 0;}
+.d-wrap{background:var(--ink);color:var(--on-dark);border-radius:var(--r);padding:50px 54px;box-shadow:0 30px 60px -32px rgba(24,42,77,0.4);}
+.d-wrap .eyebrow{color:#9aa6bd;}
+.d-wrap .eyebrow::before{background:#5b6b8c;}
+.d-head h2{font-family:var(--ff-display);font-weight:600;font-size:clamp(26px,2.9vw,38px);letter-spacing:-0.03em;margin-top:16px;max-width:20ch;color:#fff;}
+.d-body{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;margin-top:38px;align-items:center;}
+.flow{display:flex;flex-direction:column;gap:14px;}
+.step{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;border:1px solid var(--dark-line);border-radius:13px;background:rgba(255,255,255,0.03);}
+.step .ix{font-family:var(--ff-mono);font-size:12px;color:var(--btn);flex:none;width:28px;padding-top:3px;}
+.step h4{font-family:var(--ff-display);font-weight:600;font-size:17px;letter-spacing:-0.01em;color:#fff;}
+.step p{font-size:13.5px;color:var(--on-dark-mut);margin-top:5px;line-height:1.5;}
+.d-out{border-left:1px solid var(--dark-line);padding-left:36px;display:flex;flex-direction:column;gap:26px;}
+.d-out .o .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(34px,4vw,52px);letter-spacing:-0.03em;line-height:.95;color:#fff;}
+.d-out .o .n em{font-style:normal;color:var(--btn);}
+.d-out .o .l{font-size:14px;color:var(--on-dark-mut);margin-top:8px;max-width:26ch;}
+.b-wrap{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:50px 54px;}
+.b-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(24px,2.7vw,34px);letter-spacing:-0.025em;line-height:1.12;margin-top:16px;max-width:24ch;}
+.b-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px;}
+.b-card{border:1px solid var(--line);border-radius:14px;padding:30px;background:var(--bg);}
+.b-card .lab{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.b-move{display:flex;align-items:baseline;gap:14px;margin:18px 0 22px;}
+.b-move .from{font-family:var(--ff-display);font-size:22px;font-weight:500;color:var(--muted-2);}
+.b-move .ar{color:var(--btn);font-size:18px;}
+.b-move .to{font-family:var(--ff-display);font-size:clamp(34px,4vw,52px);font-weight:600;letter-spacing:-0.03em;line-height:1;}
+.b-track{height:9px;border-radius:6px;background:var(--surface-2);overflow:hidden;}
+.b-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#d49a3c,#33508a);}
+.b-note{font-size:13.5px;color:var(--muted);margin-top:14px;}
+.b-punch{margin-top:30px;display:flex;align-items:center;gap:16px;background:var(--ink);color:var(--on-dark);border-radius:14px;padding:24px 28px;}
+.b-punch .big{font-family:var(--ff-display);font-weight:600;font-size:34px;letter-spacing:-0.02em;color:var(--btn);flex:none;}
+.b-punch .txt{font-size:15px;line-height:1.45;}
+
+/* end cta */
+.endcta{padding:96px 0;border-top:1px solid var(--line);text-align:center;}
+.endcta h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(30px,4.4vw,56px);letter-spacing:-0.03em;line-height:1.02;margin-bottom:32px;text-wrap:balance;}
+.endcta .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+footer{border-top:1px solid var(--line);padding:36px 0;}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);}
+
+@media(max-width:900px){
+  .overview-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .ov-obj{grid-column:1 / -1;}
+}
+@media(max-width:809px){
+  :root{--gutter:20px;}
+  .case-title{padding:44px 0 0;}
+  .hero-shot{margin-top:32px;}
+  .overview{padding:48px 0;margin-top:48px;}
+  .overview-grid{grid-template-columns:1fr;gap:30px;}
+  .compare,.gallery{padding:60px 0;}
+  .cmp-grid{grid-template-columns:1fr;row-gap:24px;grid-template-rows:none;}
+  .cmp-card{grid-column:1 !important;grid-row:auto;grid-template-rows:none;display:block;}
+  .gal-3{grid-template-columns:1fr 1fr;}
+  .gal-2{grid-template-columns:1fr;}
+  .results-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .vrow{grid-template-columns:1fr;gap:22px;margin-top:44px;}
+  .vrow.reverse .vtext{order:0;}
+  .vmedia.portrait video{height:440px;}
+  .d-wrap,.b-wrap{padding:32px 24px;}
+  .d-body{grid-template-columns:1fr;}
+  .d-out{border-left:none;border-top:1px solid var(--dark-line);padding-left:0;padding-top:26px;}
+  .b-grid{grid-template-columns:1fr;}
+}
+@media(max-width:520px){
+  .gal-3{grid-template-columns:1fr;}
+  .results-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="back" href="Kendall%20Portfolio.html#work"><span class="ar">←</span> Kendall Casey-Green</a>
+    <a class="btn ghost" href="https://www.amazon.com/stores/JonathanGreen/" target="_blank" rel="noopener">View on Amazon ↗</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- TITLE + HERO -->
+  <section class="case-title" data-screen-label="Case Hero">
+    <div class="wrap">
+      <div class="eyebrow">Case Study · Amazon Marketplace</div>
+      <h1>How I grew an Amazon channel ~43% a year — three years running.</h1>
+    </div>
+    <div class="wrap">
+      <div class="hero-shot">
+        <img src="images/amazon-hero-laptop-phone.png" alt="The Jonathan Green Amazon storefront shown on a laptop and phone" />
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="gb-band">
+        <div class="gb-top">
+          <div class="gb-head">
+            <span class="gb-eye">The results</span>
+            <h2>Three years of <em>~43% growth</em>, every year.</h2>
+          </div>
+          <div class="gb-cum">
+            <div class="n">$23.1M</div>
+            <div class="l">Cumulative revenue · 2022–2024</div>
+          </div>
+        </div>
+        <div class="gb-chart">
+          <div class="gb-col">
+            <div class="val">$5.19M</div>
+            <div class="yoy flat">baseline</div>
+            <div class="gb-plot"><div class="gb-bar" style="height:49%"></div></div>
+            <div class="yr">2022</div>
+            <div class="ord">66,221 orders</div>
+          </div>
+          <div class="gb-col">
+            <div class="val">$7.39M</div>
+            <div class="yoy">▲ 42.4%</div>
+            <div class="gb-plot"><div class="gb-bar" style="height:70%"></div></div>
+            <div class="yr">2023</div>
+            <div class="ord">98,532 orders</div>
+          </div>
+          <div class="gb-col">
+            <div class="val">$10.56M</div>
+            <div class="yoy">▲ 42.9%</div>
+            <div class="gb-plot"><div class="gb-bar lead" style="height:100%"></div></div>
+            <div class="yr">2024</div>
+            <div class="ord">170,347 orders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="overview" data-screen-label="Overview">
+    <div class="wrap">
+      <div class="overview-grid">
+        <div class="ov-obj">
+          <div class="ov-k">Objective</div>
+          <p>Jonathan Green wasn't selling on Amazon directly, but our customers were. Third-party sellers had built listings for our products with outdated photos, thin content, and an all-around poor buying experience. With no uniform branding, imagery, or voice, those listings were quietly eroding the brand everywhere shoppers looked.</p>
+          <p>I initiated Brand Registry and pulled those listings into our own catalog, where I could own the quality. I consolidated duplicate listings, rebuilt detail pages, and ran keyword and market research so our products ranked higher for the searches that mattered, turning a fragmented presence into one of the brand's fastest-growing revenue streams.</p>
+        </div>
+        <div>
+          <div class="ov-k">The work</div>
+          <ul class="ov-list">
+            <li>Market Analysis &amp; Strategy</li>
+            <li>Brand Registry</li>
+            <li>Keyword Research</li>
+            <li>A+ Content &amp; Video</li>
+            <li>Sponsored Ads</li>
+            <li>Storefront Merchandising</li>
+            <li>Compliance &amp; Listing Reinstatement</li>
+            <li>Reporting &amp; Analytics</li>
+          </ul>
+        </div>
+        <div class="ov-meta">
+          <div class="ov-k">Details</div>
+          <div class="v">Amazon Marketplace ·<br>Seller Central<span class="sub">Channel</span></div>
+          <div class="v"><a href="https://www.amazon.com/stores/JonathanGreen/" target="_blank" rel="noopener">Jonathan Green Storefront ↗</a><span class="sub">Storefront</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE / BUILT -->
+  <section class="compare" data-screen-label="Challenge and Solution">
+    <div class="wrap">
+      <div class="cmp-head">
+        <div class="eyebrow">The challenge &amp; the work</div>
+        <h2>An underperforming channel, rebuilt to grow.</h2>
+        <p>Each gap holding Amazon back, lined up against what I put in its place.</p>
+      </div>
+
+      <div class="cmp-grid">
+        <!-- BEFORE CARD -->
+        <div class="cmp-card before">
+          <div class="cmp-label">
+            <span class="tag">Before</span>
+            <h3>A catalog we didn't control</h3>
+          </div>
+          <div class="cmp-shot">
+            <img src="images/amazon-before-listings.png" alt="Jonathan Green product listings on Amazon" />
+          </div>
+          <div class="cmp-block">
+            <span class="num">01</span>
+            <h4>Third parties owned our listings</h4>
+            <p>Jonathan Green didn't sell on Amazon directly, so third-party sellers created the product listings and we had no control over them.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">02</span>
+            <h4>Outdated photos &amp; poor content</h4>
+            <p>Those listings used old images and thin, off-brand copy that made for a confusing, low-quality buying experience.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">03</span>
+            <h4>Inconsistent branding everywhere</h4>
+            <p>With no uniform imagery, branding, or tone of voice, every listing quietly chipped away at the Jonathan Green brand.</p>
+          </div>
+        </div>
+
+        <!-- AFTER CARD -->
+        <div class="cmp-card after">
+          <div class="cmp-label">
+            <span class="tag">After</span>
+            <h3>A catalog we owned and optimized</h3>
+          </div>
+          <div class="cmp-shot">
+            <img src="images/amazon-after-listings.png" alt="Jonathan Green updated product images on Amazon" />
+          </div>
+          <div class="cmp-block">
+            <span class="num">01</span>
+            <h4>Brand Registry &amp; an owned catalog</h4>
+            <p>I initiated the move to Brand Registry and pulled our products into our own catalog, taking control of every listing's quality.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">02</span>
+            <h4>Updated photos &amp; A+ content</h4>
+            <p>Refreshed photography, on-brand copy, and A+ modules gave every product a consistent, premium presentation.</p>
+          </div>
+          <div class="cmp-block">
+            <span class="num">03</span>
+            <h4>Consolidated duplicate listings</h4>
+            <p>Merged duplicates into single authoritative pages, concentrating reviews and ranking signal behind one listing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD (1d) -->
+  <section class="method" data-screen-label="How it compounded">
+    <div class="wrap">
+      <div class="d-wrap">
+        <div class="d-head">
+          <div class="eyebrow">How it compounded</div>
+          <h2>I built a system, and the system kept paying off.</h2>
+        </div>
+        <div class="d-body">
+          <div class="flow">
+            <div class="step"><span class="ix">01</span><div><h4>Foundation</h4><p>Standardized imagery across 90%+ of the catalog, rewrote listings with keyword intent, added A+ content and video.</p></div></div>
+            <div class="step"><span class="ix">02</span><div><h4>Advertising</h4><p>A paid strategy built for efficiency and new-customer acquisition, scaling spend without sacrificing ROAS.</p></div></div>
+            <div class="step"><span class="ix">03</span><div><h4>Measurement</h4><p>Brand Analytics to track behavior and refine the approach month over month — and a seasonal storefront tuned to demand.</p></div></div>
+          </div>
+          <div class="d-out">
+            <div class="o"><div class="n"><em>~43%</em></div><div class="l">revenue growth per year, three years running</div></div>
+            <div class="o"><div class="n">$23.1M</div><div class="l">cumulative revenue · 287K+ customers</div></div>
+            <div class="o"><div class="n">8.07x</div><div class="l">ROAS, up from 5.57x as spend scaled</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EFFICIENCY (1b) -->
+  <section class="efficiency" data-screen-label="Efficiency at scale">
+    <div class="wrap">
+      <div class="b-wrap">
+        <div class="b-head">
+          <div class="eyebrow">The results · advertising</div>
+          <h2>I scaled spend and got more efficient at the same time.</h2>
+        </div>
+        <div class="b-grid">
+          <div class="b-card">
+            <div class="lab">Return on ad spend</div>
+            <div class="b-move"><span class="from">5.57x</span><span class="ar">→</span><span class="to">8.07x</span></div>
+            <div class="b-track"><div class="b-fill" style="width:81%"></div></div>
+            <div class="b-note">2023 → 2024. Peak 16.90x ROAS at 5.92% ACoS in Sept 2024.</div>
+          </div>
+          <div class="b-card">
+            <div class="lab">Ad-attributed sales</div>
+            <div class="b-move"><span class="from">$147K</span><span class="ar">→</span><span class="to">$668K</span></div>
+            <div class="b-track"><div class="b-fill" style="width:92%"></div></div>
+            <div class="b-note">4.5× more ad-driven revenue, earned more efficiently.</div>
+          </div>
+        </div>
+        <div class="b-punch">
+          <span class="big">62%</span>
+          <span class="txt">of ad-driven orders went to <strong>new-to-brand customers</strong> — the channel grew the customer base, it didn't just recapture it.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results" data-screen-label="Results">
+    <div class="wrap">
+      <div class="eyebrow">The results</div>
+      <p class="results-lead">Three years of compounding growth — earned more efficiently at every step.</p>
+      <div class="results-grid">
+        <div class="res"><div class="n">8.07x</div><div class="l">Return on ad spend</div><div class="d">Up from 5.57x</div></div>
+        <div class="res"><div class="n">62%</div><div class="l">New-to-brand</div><div class="d">Of ad-driven orders</div></div>
+        <div class="res"><div class="n">31.5%</div><div class="l">Store conversion</div><div class="d">Up from 14.7%</div></div>
+        <div class="res"><div class="n">287K+</div><div class="l">Customers</div><div class="d">2022–2024</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" data-screen-label="Inside the Amazon work">
+    <div class="wrap">
+      <div class="gal-head">
+        <div class="eyebrow">Inside the Amazon work</div>
+        <h2>Brand-first placements, built to rank and convert.</h2>
+        <p>A walkthrough of the redesigned storefront and a sponsored brand video in action.</p>
+      </div>
+
+      <div class="vrow">
+        <div class="vtext">
+          <span class="vnum">01 · <span style="letter-spacing: 1.1px;">An ad in action</span></span>
+          <h3>Sponsored video ads that turned browsers into buyers.</h3>
+          <p>I placed sponsored brand video at the top of Amazon search, winning new-to-brand orders and proving I can turn ad spend into measurable purchase intent, not just impressions.</p>
+        </div>
+        <div class="vmedia">
+          <video src="images/amazon-desktop-walkthrough.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+        </div>
+      </div>
+
+      <div class="vrow reverse">
+        <div class="vtext">
+          <span class="vnum">02 · THE STOREFRONT</span>
+          <h3>A storefront built, merchandised, and run season to season.</h3>
+          <p>I rebuilt the Amazon storefront and keep it merchandised by season, brand-led, and tuned to send shoppers straight to the right product — proof I can build and run yours the same way.</p>
+        </div>
+        <div class="vmedia portrait">
+          <video src="images/amazon-storefront-mobile.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- END CTA -->
+  <section class="endcta" data-screen-label="End CTA">
+    <div class="wrap">
+      <h2>See the storefront on Amazon, or explore more work.</h2>
+      <div class="actions">
+        <a class="btn" href="https://www.amazon.com/stores/JonathanGreen/" target="_blank" rel="noopener">View on Amazon ↗</a>
+        <a class="btn ghost" href="Kendall%20Portfolio.html#work">Back to portfolio</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© 2026 Kendall Casey-Green · Austin, Texas</span>
+    <span>Jonathan Green · Amazon Marketplace Case Study</span>
+  </div>
+</footer>
+
+<script>
+(function(){var bar=document.querySelector('header.bar');if(!bar)return;var on=function(){bar.classList.toggle('scrolled',window.scrollY>40);};on();window.addEventListener('scroll',on,{passive:true});})();
+</script>
+
+</body>
+</html>

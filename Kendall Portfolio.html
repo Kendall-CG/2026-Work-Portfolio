@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kendall Casey-Green · Director of E-Commerce &amp; Digital Marketing</title>
+<meta name="description" content="Kendall Casey-Green is a Director of E-Commerce and Digital Marketing who builds DTC operations that perform, growing a storefront from $10K to $2.5M, lifting net sales 45%, and scaling Amazon ~43% a year to $10.56M annually." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+:root{
+  --bg:#f6f4ec;
+  --ink:#182a4d;
+  --ink-2:#27395d;
+  --muted:#5d6678;
+  --muted-2:#9aa0ad;
+  --line:#e6e2d8;
+  --line-2:#dcd8cc;
+  --surface:#efece3;
+  --surface-2:#e8e4d9;
+  --accent:#182a4d;
+  --available:oklch(0.68 0.15 150);
+  --sage-bg:#e9ebf1;
+  --sage-ring:#c2c9d9;
+  --btn:#d49a3c;
+  --btn-hover:#c4892f;
+  --btn-ink:#17243d;
+  --container:1200px;
+  --gutter:32px;
+  --r:14px;
+  --ff-display:"Inter Tight", system-ui, sans-serif;
+  --ff-body:"Inter", system-ui, sans-serif;
+  --ff-mono:"JetBrains Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--ff-body);
+  font-size:17px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--gutter);width:100%;}
+.eyebrow{
+  font-family:var(--ff-mono);
+  font-size:12px;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--muted-2);
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 82%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s ease, background .3s ease;}
+header.nav.scrolled{background:color-mix(in srgb,var(--ink) 92%, transparent);border-color:rgba(255,255,255,0.14);}
+.nav.scrolled .brand{color:#fff;}
+.nav.scrolled .brand .mark{background:var(--bg);color:var(--ink);}
+.nav.scrolled .nav-links a{color:rgba(255,255,255,0.7);}
+.nav.scrolled .nav-links a:hover,.nav.scrolled .nav-links a.active{color:#fff;}
+.nav.scrolled .burger{border-color:rgba(255,255,255,0.32);}
+.nav.scrolled .burger span{background:#fff;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:600;font-size:18px;letter-spacing:-0.02em;}
+.brand .mark{width:24px;height:24px;border-radius:7px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:600;}
+.nav-links{display:flex;align-items:center;gap:34px;}
+.nav-links a{font-size:14.5px;color:var(--muted);transition:color .2s ease;position:relative;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.nav-cta{display:flex;align-items:center;gap:18px;}
+.status{display:flex;align-items:center;gap:8px;font-family:var(--ff-mono);font-size:12px;color:var(--muted);}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--available);position:relative;}
+.status .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--available);opacity:.5;animation:pulse 2.4s ease-out infinite;}
+@keyframes pulse{0%{transform:scale(.6);opacity:.6;}100%{transform:scale(1.6);opacity:0;}}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-body);font-weight:600;font-size:14.5px;padding:10px 18px;border-radius:100px;border:1px solid var(--btn);background:var(--btn);color:var(--btn-ink);transition:transform .2s ease, background .2s ease, border-color .2s ease;}
+.btn:hover{transform:translateY(-1px);background:var(--btn-hover);border-color:var(--btn-hover);}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line-2);}
+.btn.ghost:hover{border-color:var(--ink);}
+.burger{display:none;flex-direction:column;gap:5px;width:40px;height:40px;border:1px solid var(--line-2);border-radius:10px;align-items:center;justify-content:center;background:transparent;cursor:pointer;}
+.burger span{width:16px;height:1.6px;background:var(--ink);transition:.3s;}
+.burger.open span:nth-child(1){transform:translateY(6.6px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg);}
+
+/* ---------- hero ---------- */
+.hero{padding:96px 0 84px;}
+.hero .eyebrow{margin-bottom:30px;}
+.hero h1{
+  font-family:var(--ff-display);
+  font-weight:500;
+  font-size:clamp(42px,7.4vw,96px);
+  line-height:0.97;
+  letter-spacing:-0.035em;
+  max-width:14ch;
+  text-wrap:balance;
+}
+.hero h1 em{font-style:italic;color:var(--muted);}
+.hero-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:36px;margin-top:48px;}
+.hero-foot p{max-width:42ch;color:var(--muted);font-size:18px;}
+.hero-meta{display:flex;gap:40px;flex:none;}
+.hero-meta .item{display:flex;flex-direction:column;gap:4px;}
+.hero-meta .k{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted-2);}
+.hero-meta .v{font-size:15px;font-weight:500;}
+
+/* marquee strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;margin-top:40px;}
+.marquee{display:flex;gap:56px;width:max-content;animation:scroll 28s linear infinite;}
+.marquee span{font-family:var(--ff-display);font-size:15px;color:var(--muted);display:flex;align-items:center;gap:56px;white-space:nowrap;}
+.marquee span::after{content:"/";color:var(--muted-2);font-size:14px;}
+@keyframes scroll{to{transform:translateX(-50%);}}
+
+/* ---------- section frame ---------- */
+section{padding:104px 0;}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:56px;border-bottom:1px solid var(--line);padding-bottom:24px;}
+.sec-head h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(28px,3.6vw,42px);letter-spacing:-0.025em;}
+.sec-head .num{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);}
+
+/* ---------- work ---------- */
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 48px;}
+.proj{display:flex;flex-direction:column;cursor:pointer;}
+.proj .thumb{display:block;width:100%;aspect-ratio:16/11;border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:transform .45s cubic-bezier(.2,.7,.2,1);}
+.proj:hover .thumb{transform:translateY(-6px);}
+.proj image-slot{width:100%;height:100%;}
+.proj .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;gap:16px;}
+.proj h3{font-family:var(--ff-display);font-weight:500;font-size:24px;letter-spacing:-0.02em;display:flex;align-items:center;gap:10px;}
+.proj h3 .arrow{opacity:0;transform:translate(-6px,0);transition:.3s;font-size:18px;}
+.proj:hover h3 .arrow{opacity:1;transform:translate(0,0);}
+.proj .year{font-family:var(--ff-mono);font-size:13px;color:var(--muted-2);flex:none;}
+.proj p{color:var(--muted);font-size:15.5px;margin-top:8px;max-width:46ch;}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.tag{font-family:var(--ff-mono);font-size:11.5px;letter-spacing:0.02em;color:var(--muted);border:1px solid var(--line-2);border-radius:100px;padding:5px 11px;}
+.case-link{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;margin-top:20px;font-family:var(--ff-body);font-weight:600;font-size:14.5px;border:1px solid var(--btn);background:var(--btn);color:var(--btn-ink);border-radius:100px;padding:10px 20px;transition:background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;}
+.case-link:hover{background:var(--btn-hover);border-color:var(--btn-hover);color:var(--btn-ink);transform:translateY(-1px);}
+.case-link span{transition:transform .2s ease;}
+.case-link:hover span{transform:translateX(3px);}
+
+/* ---------- about ---------- */
+.about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start;}
+.about image-slot{width:100%;height:100%;border-radius:var(--r);}
+.about .bio h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3vw,38px);letter-spacing:-0.025em;line-height:1.15;margin-bottom:24px;text-wrap:balance;}
+.about .bio p{color:var(--muted);margin-bottom:18px;font-size:17px;}
+.about .bio p strong{color:var(--ink);font-weight:600;}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:30px;border-top:1px solid var(--line-2);}
+
+/* ---------- experience ---------- */
+.exp-list{display:flex;flex-direction:column;}
+.exp-row{display:grid;grid-template-columns:140px 1fr auto;gap:28px;align-items:baseline;padding:26px 0;border-top:1px solid var(--line);transition:background .25s ease;}
+.exp-row:last-child{border-bottom:1px solid var(--line);}
+.exp-row:hover{background:linear-gradient(90deg,var(--surface),transparent);}
+.exp-row .yr{font-family:var(--ff-mono);font-size:13px;color:var(--muted-2);}
+.exp-row .role{font-family:var(--ff-display);font-size:20px;font-weight:500;letter-spacing:-0.015em;}
+.exp-row .role span{display:block;font-family:var(--ff-body);font-size:15px;font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0;}
+.exp-row .co{font-size:15px;color:var(--muted);text-align:right;}
+
+/* experience — grouped by company (Option 2) */
+.exp-groups{display:flex;flex-direction:column;}
+.exp-group{display:grid;grid-template-columns:248px 1fr;gap:40px;padding:30px 0;border-top:1px solid var(--line);}
+.exp-group:last-child{border-bottom:1px solid var(--line);}
+.exp-co{display:flex;align-items:center;gap:14px;}
+.exp-logo{width:48px;height:48px;flex:none;border-radius:11px;background:#fff;border:1.5px solid #16171a;overflow:hidden;display:grid;place-items:center;box-shadow:0 4px 12px -6px rgba(24,42,77,0.28);}
+.exp-logo img{width:100%;height:100%;object-fit:contain;display:block;}
+.exp-logo.mono{background:var(--ink);color:#f6f4ec;font-family:var(--ff-display);font-weight:600;font-size:14px;letter-spacing:0.01em;}
+.exp-co .co-name{font-family:var(--ff-display);font-weight:600;font-size:17px;letter-spacing:-0.01em;line-height:1.15;}
+.exp-co .co-period{font-family:var(--ff-mono);font-size:11px;color:var(--muted-2);margin-top:3px;}
+.exp-roles{display:flex;flex-direction:column;gap:18px;}
+.exp-role .role-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;}
+.exp-role .role-title{font-family:var(--ff-display);font-weight:600;font-size:18px;letter-spacing:-0.012em;}
+.exp-role .role-yr{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);flex:none;}
+.exp-role .role-sub{margin:5px 0 0;color:var(--muted);font-size:14.5px;line-height:1.5;}
+/* experience — navy band */
+#experience{background:var(--ink);}
+#experience .sec-head h2{color:#fff;}
+#experience .sec-head{border-bottom:none;padding-bottom:0;margin-bottom:28px;}
+#experience .sec-head .num{color:#9aa6bd;}
+#experience .exp-group{border-top-color:rgba(255,255,255,0.14);}
+#experience .exp-group:last-child{border-bottom-color:rgba(255,255,255,0.14);}
+#experience .exp-co .co-name{color:#fff;}
+#experience .exp-co .co-period{color:#aab2c5;}
+#experience .exp-role .role-title{color:#fff;}
+#experience .exp-role .role-yr{color:#aab2c5;}
+#experience .exp-role .role-sub{color:#cfd5e0;}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:130px 0;}
+.contact .eyebrow{justify-content:center;margin-bottom:28px;}
+.contact h2{font-family:var(--ff-display);font-weight:500;font-size:clamp(40px,6.5vw,84px);letter-spacing:-0.035em;line-height:1;margin-bottom:40px;text-wrap:balance;}
+.contact h2 a{border-bottom:2px solid var(--line-2);transition:border-color .25s ease;}
+.contact h2 a:hover{border-color:var(--ink);}
+.contact-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:40px 0;}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+.foot-inner .copy{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);}
+.socials{display:flex;gap:26px;}
+.socials a{font-size:14px;color:var(--muted);transition:color .2s ease;}
+.socials a:hover{color:var(--ink);}
+
+/* ---------- reveal ---------- */
+/* Hidden base only applies when motion is OK AND js has armed it; default = visible */
+@media (prefers-reduced-motion: no-preference){
+  html.anim .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
+  html.anim .reveal.in{opacity:1;transform:none;}
+}
+
+/* ---------- mobile ---------- */
+@media(max-width:980px){
+  .work-grid{gap:48px 32px;}
+  .about-grid{grid-template-columns:1fr;gap:40px;height:auto!important;}
+  .about image-slot{aspect-ratio:2/3;max-width:320px;height:auto;}
+}
+@media(max-width:809px){
+  :root{--gutter:20px;}
+  .nav-links,.nav-cta .btn,.nav-cta .status{display:none;}
+  .burger{display:flex;}
+  .nav-cta{gap:0;}
+  .work-grid{grid-template-columns:1fr;gap:40px;}
+  .hero{padding:64px 0 56px;}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:28px;}
+  .hero-meta{gap:32px;}
+  section{padding:72px 0;}
+  .exp-row{grid-template-columns:1fr;gap:6px;}
+  .exp-row .co{text-align:left;}
+  .exp-group{grid-template-columns:1fr;gap:18px;}
+  .mobile-menu.open{display:flex;}
+}
+.mobile-menu{display:none;position:fixed;inset:72px 0 0;z-index:50;background:var(--bg);flex-direction:column;padding:28px var(--gutter);gap:6px;}
+.mobile-menu a{font-family:var(--ff-display);font-size:30px;font-weight:500;letter-spacing:-0.02em;padding:14px 0;border-bottom:1px solid var(--line);}
+.mobile-menu .btn{margin-top:24px;justify-content:center;font-size:16px;padding:14px;}
+
+/* ---------- results / stats (Option B — inverted navy block) ---------- */
+.stats{padding:64px 0;}
+.stats-band{background:var(--ink);border-radius:20px;overflow:hidden;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:48px 34px;border-right:1px solid rgba(255,255,255,.12);}
+.stat:last-child{border-right:none;}
+.stat .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(40px,4.6vw,64px);letter-spacing:-0.03em;line-height:1;color:#f6f4ec;}
+.stat .l{font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.04em;color:#b3bccd;margin-top:18px;}
+.stat .d{font-size:14px;color:#8e99ad;margin-top:6px;}
+@media(max-width:809px){.stats-grid{grid-template-columns:1fr 1fr;}.stat:nth-child(2){border-right:none;}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12);}}
+/* two-accomplishment highlight */
+.wins-head{padding:40px 44px 0;}
+.wins-head .role{font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.09em;color:var(--btn,#d49a3c);}
+.wins-head h2{font-family:var(--ff-display);font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:-0.02em;color:#f6f4ec;margin-top:12px;max-width:24ch;}
+.wins{display:grid;grid-template-columns:1fr 1fr;}
+.win{padding:40px 44px 46px;border-right:1px solid rgba(255,255,255,.12);}
+.win:last-child{border-right:none;}
+.win .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(46px,5.4vw,76px);letter-spacing:-0.035em;line-height:1;color:#f6f4ec;}
+.win .n em{font-style:normal;color:var(--btn,#d49a3c);}
+.win .t{font-family:var(--ff-display);font-weight:600;font-size:19px;letter-spacing:-0.01em;color:#f6f4ec;margin-top:20px;}
+.win .d{font-size:15px;line-height:1.55;color:#aab4c6;margin-top:8px;max-width:34ch;}
+@media(max-width:809px){.wins{grid-template-columns:1fr;}.win{border-right:none;}.win:first-child{border-bottom:1px solid rgba(255,255,255,.12);}.wins-head{padding:30px 24px 0;}.win{padding:28px 24px 34px;}}
+
+/* ---------- testimonial ---------- */
+.quote{padding:104px 0;}
+.quote .big{font-family:var(--ff-display);font-weight:500;font-size:clamp(26px,3.6vw,46px);letter-spacing:-0.02em;line-height:1.24;max-width:24ch;text-wrap:balance;margin-top:26px;}
+.quote .who{font-family:var(--ff-mono);font-size:13px;color:var(--muted);margin-top:30px;}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:52px;align-items:start;}
+.qcard{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);padding:30px;background:var(--surface);}
+.qbody{position:relative;max-height:10.5em;overflow:hidden;transition:max-height .4s ease;}
+.qcard.open .qbody{max-height:1600px;}
+.qbody::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3.2em;background:linear-gradient(transparent,var(--surface));pointer-events:none;transition:opacity .3s ease;}
+.qcard.open .qbody::after{opacity:0;}
+.qcard p{color:var(--ink-2);font-size:15.5px;line-height:1.62;}
+.qcard p + p{margin-top:14px;}
+.readmore{align-self:flex-start;margin-top:16px;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink);background:none;border:none;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:7px;}
+.readmore::after{content:"+";font-size:13px;}
+.qcard.open .readmore::after{content:"\2013";}
+.readmore:hover{opacity:.6;}
+.readmore.hidden{display:none;}
+.qcard .who{display:flex;align-items:center;gap:14px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line-2);}
+.qcard .av{width:44px;height:44px;border-radius:50%;background:var(--sage-bg);border:1px solid var(--sage-ring);display:grid;place-items:center;font-family:var(--ff-display);font-weight:600;font-size:15px;color:var(--ink);flex:none;}
+.qcard .nm{font-family:var(--ff-display);font-weight:600;font-size:16px;letter-spacing:-0.01em;}
+.qcard .rl{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted-2);margin-top:4px;line-height:1.45;}
+@media(max-width:809px){.quotes{grid-template-columns:1fr;}}
+
+/* recommendations — featured quote + selector (auto-rotating) */
+.recs{display:grid;grid-template-columns:1.42fr .58fr;gap:28px;margin-top:8px;align-items:stretch;}
+.recs .av{border-radius:50%;display:grid;place-items:center;font-family:var(--ff-display);font-weight:600;flex:none;}
+.rec-feat{position:relative;background:var(--ink);color:#f6f4ec;border-radius:18px;padding:46px;display:flex;flex-direction:column;min-height:330px;overflow:hidden;}
+.rec-mark{font-family:var(--ff-display);font-weight:600;font-size:62px;line-height:.5;color:#46577a;height:32px;}
+.rec-q{font-family:var(--ff-display);font-weight:500;font-size:clamp(21px,2.3vw,29px);line-height:1.3;letter-spacing:-0.02em;margin:31px 0 13px;text-wrap:pretty;border:none;font-style:normal;transition:opacity .25s ease;}
+.rec-who{display:flex;align-items:center;gap:14px;margin-top:auto;transition:opacity .25s ease;}
+.rec-feat.swapping .rec-q,.rec-feat.swapping .rec-who,.rec-feat.swapping .rec-more{opacity:0;}
+.rec-more{align-self:flex-start;margin:0 0 auto;background:none;border:none;padding:0;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:#cdd8ea;cursor:pointer;border-bottom:1px solid #46577a;transition:color .2s ease,border-color .2s ease,opacity .25s ease;}
+.rec-more:hover{color:#fff;border-color:#fff;}
+.rec-who .av{width:48px;height:48px;font-size:15px;background:#27395d;border:1px solid #46577a;color:#dbe2f0;}
+.rec-who .nm{font-family:var(--ff-display);font-weight:600;font-size:17px;letter-spacing:-0.01em;color:#f6f4ec;}
+.rec-who .rl{font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.03em;color:#9fb0cc;margin-top:4px;line-height:1.4;}
+.rec-picker{display:flex;flex-direction:column;gap:12px;}
+.rec-pick{position:relative;display:flex;align-items:center;gap:14px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer;text-align:left;font:inherit;color:inherit;overflow:hidden;transition:border-color .2s ease,background .2s ease,transform .2s ease,box-shadow .2s ease;}
+.rec-pick:hover{transform:translateY(-2px);}
+.rec-pick.active{border-color:var(--ink);background:var(--bg);box-shadow:0 8px 22px rgba(24,42,77,.09);}
+.rec-pick .av{width:42px;height:42px;font-size:14px;background:var(--sage-bg);border:1px solid var(--sage-ring);color:var(--ink);}
+.rec-pick .nm{font-family:var(--ff-display);font-weight:600;font-size:15px;letter-spacing:-0.01em;}
+.rec-pick .rl{font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.03em;color:var(--muted-2);margin-top:3px;}
+.rec-pick .prog{position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--accent);}
+.rec-pick.active.timing .prog{width:100%;transition:width var(--rec-dur,5.5s) linear;}
+@media(max-width:809px){.recs{grid-template-columns:1fr;}.rec-feat{padding:32px;min-height:0;}.rec-picker{flex-direction:row;flex-wrap:wrap;}.rec-pick{flex:1 1 160px;}}
+@media(max-width:809px){
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .stat{padding:28px 20px;border-bottom:1px solid var(--line);}
+  .stat:first-child{padding-left:20px;}
+  .stat:nth-child(2n){border-right:none;}
+  .stat:nth-child(3),.stat:nth-child(4){border-bottom:none;}
+  .quote{padding:64px 0;}
+}
+
+/* ---------- hero (photo header) ---------- */
+.hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr;gap:64px;align-items:center;}
+.hero-copy{max-width:660px;}
+.kicker{display:flex;align-items:center;gap:16px;font-family:var(--ff-mono);font-size:12.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:30px;}
+.kicker::before{content:"";width:46px;height:1.5px;background:var(--ink);display:block;flex:none;}
+.hero h1{font-family:var(--ff-display);font-weight:700;font-size:clamp(44px,6.2vw,102px);line-height:0.95;letter-spacing:-0.04em;max-width:none;text-wrap:balance;}
+.hero-copy p{color:var(--muted);font-size:19px;line-height:1.55;max-width:46ch;margin-top:30px;}
+.hero-cta{display:flex;align-items:center;gap:22px;margin-top:42px;flex-wrap:wrap;}
+.btn-lg{padding:16px 30px;font-size:16px;}
+.reel{display:inline-flex;align-items:center;gap:14px;font-weight:500;font-size:16px;color:var(--ink);}
+.reel .circ{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;font-size:18px;transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;}
+.reel:hover .circ{background:var(--ink);color:var(--bg);border-color:var(--ink);transform:translateX(3px);}
+.hero-photo{display:flex;justify-content:center;}
+.arch-frame{padding:10px;width:min(460px,100%);background:var(--sage-bg);border:1px solid var(--sage-ring);border-radius:50% 50% 24px 24px / 44% 44% 24px 24px;}
+.arch{overflow:hidden;aspect-ratio:4/5;background:var(--surface);border-radius:50% 50% 16px 16px / 44% 44% 16px 16px;}
+.arch image-slot{display:block;width:100%;height:100%;}
+@media(max-width:980px){.hero-grid{gap:40px;}}
+@media(max-width:809px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .hero-photo{justify-content:flex-start;}
+  .arch-frame{width:min(340px,100%);}
+  .hero-copy p{font-size:17px;}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><span class="mark">K</span> Kendall Casey-Green</a>
+    <div class="nav-cta">
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+      </nav>
+      <a href="mailto:kendallgreen988@gmail.com?subject=Let%27s%20get%20in%20touch" class="btn">Get in touch</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="mailto:kendallgreen988@gmail.com?subject=Let%27s%20get%20in%20touch" class="btn">Get in touch</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" data-screen-label="Hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="kicker reveal">E-Commerce &amp; Marketing Leadership</div>
+        <h1 class="reveal">Commerce That Converts</h1>
+        <p class="reveal">I'm a Director of E-Commerce and Digital Marketing who runs the storefront, brand, and demand as one revenue engine. Known for sharp attention to detail, strong project management, and an eye for design, I build DTC operations that perform: a storefront grown from $10K to $2.5M, net sales up 45%, AOV up 30%, and an Amazon channel scaled ~43% a year to $10.56M annually.</p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn btn-lg">View Work</a>
+          <a href="assets/Kendall-Casey-Green-Resume.pdf" target="_blank" rel="noopener" class="reel"><span class="circ" aria-hidden="true">→</span> Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="arch-frame">
+          <div class="arch">
+            <image-slot id="headshot" src="images/kendall-portrait.jpg" fit="cover" placeholder="Portrait"></image-slot>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="strip reveal">
+      <div class="marquee">
+        <span>E-Commerce</span><span>Paid Media</span><span>Amazon</span><span>SEO</span><span>Email &amp; Lifecycle</span><span>Brand &amp; Content</span><span>Team Leadership</span>
+        <span>E-Commerce</span><span>Paid Media</span><span>Amazon</span><span>SEO</span><span>Email &amp; Lifecycle</span><span>Brand &amp; Content</span><span>Team Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="stats" id="results" data-screen-label="Results">
+    <div class="wrap">
+      <div class="stats-band">
+        <div class="wins-head reveal">
+          <div class="role">As Director of E-Commerce</div>
+          <h2>Two numbers that sum up the role.</h2>
+        </div>
+        <div class="wins">
+          <div class="win reveal">
+            <div class="n">$10K <em>→</em> $2.5M</div>
+            <div class="t">Built the DTC storefront into a multi-million-dollar business</div>
+            <div class="d">Owned the site, brand, and growth end to end — from a near-zero store to $2.5M in annual revenue.</div>
+          </div>
+          <div class="win reveal">
+            <div class="n"><em>~43%</em> / yr</div>
+            <div class="t">Grew Amazon to $10.56M a year, three years running</div>
+            <div class="d">$23.1M in cumulative revenue, compounding ~43% annually while ad efficiency climbed to 8.07x ROAS.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" data-screen-label="Work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Featured Work</h2>
+        <span class="num">[ 05 · Case Studies ] 2013–2026</span>
+      </div>
+      <div class="work-grid">
+
+        <article class="proj reveal">
+          <a class="thumb" href="Jonathan-Green-Case-Study.html"><image-slot id="work1" src="images/jg-dtc-laptop-mobile.png" fit="cover" placeholder="Jonathan Green" radius="14"></image-slot></a>
+          <div class="meta">
+            <h3><a href="Jonathan-Green-Case-Study.html">Owned a full DTC site rebuild <span class="arrow">→</span></a></h3>
+            <span class="year">2019–25</span>
+          </div>
+          <p>The online store was underperforming. I rebuilt it end to end and grew it from $10K to $2.5M in annual sales.</p>
+          <div class="tags"><span class="tag">E-Commerce</span><span class="tag">UX / Web</span><span class="tag">SEO</span><span class="tag">CRO</span></div>
+          <a class="case-link" href="Jonathan-Green-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="proj reveal">
+          <a class="thumb" href="Amazon-Marketplace-Case-Study.html"><image-slot id="work2" src="images/jg-amazon-laptop-mobile-v2.png" fit="cover" placeholder="Amazon A+ content" radius="14"></image-slot></a>
+          <div class="meta">
+            <h3><a href="Amazon-Marketplace-Case-Study.html">Grew an Amazon channel ~43% a year <span class="arrow">→</span></a></h3>
+            <span class="year">2022–25</span>
+          </div>
+          <p>Outside sellers controlled the brand's messy Amazon listings. I took them over and grew the channel ~43% a year to $10.56M.</p>
+          <div class="tags"><span class="tag">Amazon</span><span class="tag">SEO</span><span class="tag">Merchandising</span></div>
+          <a class="case-link" href="Amazon-Marketplace-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="proj reveal">
+          <a class="thumb" href="Paid-Media-Case-Study.html"><image-slot id="work3" src="images/paid-media-meta-hero.png" fit="cover" placeholder="Paid media" radius="14"></image-slot></a>
+          <div class="meta">
+            <h3><a href="Paid-Media-Case-Study.html">Scaled DTC with paid media &amp; content <span class="arrow">→</span></a></h3>
+            <span class="year">2019–25</span>
+          </div>
+          <p>A small brand fighting a giant for attention. I ran video and paid campaigns that helped grow DTC revenue from $10K to $2.5M.</p>
+          <div class="tags"><span class="tag">Paid Media</span><span class="tag">Meta</span><span class="tag">YouTube</span></div>
+          <a class="case-link" href="Paid-Media-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="proj reveal">
+          <a class="thumb" href="SEO-Case-Study.html"><image-slot id="work4" src="images/seo-card-desktop-mobile-v2.png" fit="cover" placeholder="SEO" radius="14"></image-slot></a>
+          <div class="meta">
+            <h3><a href="SEO-Case-Study.html">Grew organic search revenue 266% <span class="arrow">→</span></a></h3>
+            <span class="year">2019–25</span>
+          </div>
+          <p>I've grown organic traffic 266% and kept ranking through five Google Core Updates by building content architecture and on-page SEO that compounds, not backlinks that can vanish overnight.</p>
+          <div class="tags"><span class="tag">SEO</span><span class="tag">Content</span><span class="tag">Organic Search</span></div>
+          <a class="case-link" href="SEO-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="proj reveal">
+          <a class="thumb" href="Affiliate-Marketing-Case-Study.html"><image-slot id="work5" src="images/affiliate-bobvila-placement.png" fit="cover" placeholder="Affiliate marketing" radius="14"></image-slot></a>
+          <div class="meta">
+            <h3><a href="Affiliate-Marketing-Case-Study.html">Built a $605K affiliate revenue channel <span class="arrow">→</span></a></h3>
+            <span class="year">2022–24</span>
+          </div>
+          <p>A concentrated, unprofitable affiliate program. I rebuilt the partner network and pricing, growing revenue 54% to $605K cumulative.</p>
+          <div class="tags"><span class="tag">Affiliate</span><span class="tag">Partnerships</span><span class="tag">Performance Marketing</span></div>
+          <a class="case-link" href="Affiliate-Marketing-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about" data-screen-label="About">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>About Me:</h2>
+        <span class="num">[ Profile ]</span>
+      </div>
+      <div class="about-grid">
+        <image-slot class="reveal" id="portrait" shape="rounded" radius="14" src="images/Kendall-Headshot-Austin-Texas-2026-Riley-Glenn-Photography-2.jpg" fit="cover" placeholder="Portrait" style="height: 562px; width: 429px;"></image-slot>
+        <div class="bio reveal">
+          <h2>An E-Commerce &amp; Marketing leader driving growth as one revenue engine.</h2>
+          <p>I lead e-commerce and digital marketing as a single growth engine, and I thrive on the range it takes. I have owned a 200-SKU DTC storefront on WooCommerce, directed six agency partners across paid media, SEO, Amazon, and UX, and held every one accountable to ROAS and CAC. Promoted to <strong>Director of Digital Marketing &amp; E-Commerce</strong> at <strong>Jonathan Green</strong>, I grew the storefront from $10K to $2.5M and drove a 45% net-sales lift.</p>
+          <p>Earlier, as an <strong>Associate Product Manager at Rocket Lawyer</strong>, I led a 15-person team building an e-commerce ecosystem of catalog, subscriptions, billing, and internal tools behind a multi-million-dollar subscription business. Today I'm <strong>Fractional Marketing Director of MDH Beauty</strong>.</p>
+          <p>Detail-oriented project management and an eye for design shape everything I ship, from merchandising and conversion to retention. Based in Austin, Texas, I recharge by cooking, traveling, and practicing yoga, and I bring that same curiosity and care to every team I join.</p>
+          <div class="toolbar">
+            <span class="tag">E-Commerce &amp; Product</span><span class="tag">Paid Media</span><span class="tag">SEO</span><span class="tag">Email &amp; Lifecycle</span><span class="tag">Content Strategy</span><span class="tag">Team Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="quote" data-screen-label="Testimonials">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>What people say</h2>
+        <span class="num">[ Recommendations ]</span>
+      </div>
+      <div class="recs reveal">
+        <div class="rec-feat">
+          <div class="rec-mark">“</div>
+          <blockquote class="rec-q" id="recQuote">“It is rare to come across a director with as much knowledge of the entire digital marketing landscape as Kendall. Her follow-up, follow-through, organization, and diligence were second-to-none. She not only gets stuff done with results, she motivates others to do the same.”</blockquote>
+          <div class="rec-who"><span class="av" id="recAv">LM</span><div><div class="nm" id="recNm">Logan M.</div><div class="rl" id="recRl">Senior Director of SEO, Intero Digital · Agency partner</div></div></div>
+        </div>
+        <div class="rec-picker">
+          <button class="rec-pick active" type="button"><span class="av">LM</span><div><div class="nm">Logan M.</div><div class="rl">Sr. Director of SEO · Intero Digital</div></div><span class="prog"></span></button>
+          <button class="rec-pick" type="button"><span class="av">BW</span><div><div class="nm">Brianna W.</div><div class="rl">Marketing Associate · Jonathan Green</div></div><span class="prog"></span></button>
+          <button class="rec-pick" type="button"><span class="av">SM</span><div><div class="nm">Stephanie M.</div><div class="rl">Product Manager · Rocket Lawyer</div></div><span class="prog"></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" data-screen-label="Experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Experience</h2>
+        <span class="num">[ Career ]</span>
+      </div>
+      <div class="exp-groups">
+        <div class="exp-group reveal">
+          <div class="exp-co">
+            <span class="exp-logo"><img src="images/logo-mdh-sq.png" alt="MDH Beauty logo" /></span>
+            <div><div class="co-name">MDH Beauty</div><div class="co-period">2025 – Now</div></div>
+          </div>
+          <div class="exp-roles">
+            <div class="exp-role">
+              <div class="role-top"><span class="role-title">Fractional Marketing Director</span><span class="role-yr">2025 – Now</span></div>
+              <p class="role-sub" style="width: 697px; height: 29px">Led MDH Beauty's SEO and digital launch from zero — keyword strategy, GA4 e-commerce tracking, and the brand, content, and owned-channel infrastructure built to drive customer acquisition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="exp-group reveal">
+          <div class="exp-co">
+            <span class="exp-logo"><img src="images/logo-jg-sq.png" alt="Jonathan Green logo" /></span>
+            <div><div class="co-name">Jonathan Green</div><div class="co-period">2019 – 2025</div></div>
+          </div>
+          <div class="exp-roles">
+            <div class="exp-role">
+              <div class="role-top"><span class="role-title">Director of Digital Marketing &amp; E-Commerce</span><span class="role-yr">2022 – 2025</span></div>
+              <p class="role-sub" style="width: 698px; height: 45px">Owned DTC and Amazon and six agency partners, promoted from Manager. Grew the storefront from $10K to $2.5M.</p>
+            </div>
+            <div class="exp-role">
+              <div class="role-top"><span class="role-title">Digital Marketing &amp; Website Manager</span><span class="role-yr">2019 – 2022</span></div>
+              <p class="role-sub" style="width: 647px; height: 42px">Built the DTC site from the ground up on WooCommerce, wrote and produced the brand's first paid media and video creative, and stood up email and SEO foundations from scratch.</p>
+            </div>
+          </div>
+        </div>
+        <div class="exp-group reveal">
+          <div class="exp-co">
+            <span class="exp-logo"><img src="images/logo-rl-sq.png" alt="Rocket Lawyer logo" /></span>
+            <div><div class="co-name">Rocket Lawyer</div><div class="co-period">2013 – 2015</div></div>
+          </div>
+          <div class="exp-roles">
+            <div class="exp-role">
+              <div class="role-top"><span class="role-title">Associate Product Manager, E-Commerce &amp; Internal Tools</span><span class="role-yr">2014 – 2015</span></div>
+              <p class="role-sub">Led a 15-person team building a subscription-commerce ecosystem.</p>
+            </div>
+            <div class="exp-role">
+              <div class="role-top"><span class="role-title">Junior Product Manager &amp; Incorporation Specialist</span><span class="role-yr">2013 – 2014</span></div>
+              <p class="role-sub">Built CRM and e-commerce tooling for sales and service workflows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" data-screen-label="Contact">
+    <div class="wrap">
+      <div class="eyebrow">Open to new opportunities · 2026</div>
+      <h2>Let's get to know <a href="mailto:kendallgreen988@gmail.com">each other.</a></h2>
+      <div class="contact-actions">
+        <a href="mailto:kendallgreen988@gmail.com" class="btn">Email Kendall</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span class="copy">2026 · Kendall Casey-Green · Built With Care</span>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/kendallcasey-green/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/Kendall-Casey-Green-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="mailto:kendallgreen988@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // sticky nav border
+  const nav=document.getElementById('nav');
+  const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>40);};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // mobile menu
+  const burger=document.getElementById('burger');
+  const menu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',()=>{
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+    document.body.style.overflow=menu.classList.contains('open')?'hidden':'';
+  });
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    burger.classList.remove('open');menu.classList.remove('open');document.body.style.overflow='';
+  }));
+
+  // reveal on scroll — only arm hidden state if we can actually animate
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reveals=[...document.querySelectorAll('.reveal')];
+  const showAll=()=>reveals.forEach(el=>el.classList.add('in'));
+  if(!reduce && 'IntersectionObserver' in window){
+    document.documentElement.classList.add('anim');
+    reveals.forEach((el,i)=>{el.style.transitionDelay=(Math.min(i,6)*40)+'ms';});
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
+    reveals.forEach(el=>io.observe(el));
+    // failsafe: if the observer never fires (sandboxed/iframe), reveal everything
+    setTimeout(showAll,700);
+    window.addEventListener('load',()=>setTimeout(showAll,200));
+  }else{
+    showAll();
+  }
+
+  // active nav link via section observer
+  const links=[...document.querySelectorAll('.nav-links a')];
+  const map={};links.forEach(l=>map[l.getAttribute('href').slice(1)]=l);
+  const secObs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const id=e.target.id;if(map[id])map[id].classList.add('active');
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  ['work','about','experience','contact'].forEach(id=>{const s=document.getElementById(id);if(s)secObs.observe(s);});
+
+  // recommendations — featured quote + selector, auto-rotating
+  (function(){
+    const data=[
+      {av:'LM',nm:'Logan M.',rl:'Senior Director of SEO, Intero Digital · Agency partner',lead:'It is rare to come across a director with as much knowledge of the entire digital marketing landscape as Kendall.',q:'It is rare to come across a director with as much knowledge of the entire digital marketing landscape as Kendall. Her follow-up, follow-through, organization, and diligence were second-to-none. She not only gets stuff done with results, she motivates others to do the same.'},
+      {av:'BW',nm:'Brianna W.',rl:'Digital Marketing Associate, Jonathan Green · Reported to Kendall',lead:'Kendall led with kindness, patience, and a genuine commitment to helping me grow.',q:'Kendall led with kindness, patience, and a genuine commitment to helping me grow. No matter how busy she was, she was always available. Her direction was thoughtful, clear, and steady, and she made every challenge feel manageable.'},
+      {av:'SM',nm:'Stephanie M.',rl:'Product Manager, Rocket Lawyer',lead:'Kendall is a champion for the users of internal tools, and it shows in her work.',q:'Kendall is a champion for the users of internal tools and it shows in her work. She understands these users and their day to day well, and is passionate about building products that improve their lives.'}
+    ];
+    const DUR=5500;
+    const feat=document.querySelector('.rec-feat');
+    const q=document.getElementById('recQuote'),av=document.getElementById('recAv'),nm=document.getElementById('recNm'),rl=document.getElementById('recRl');
+    const picks=[...document.querySelectorAll('.rec-pick')];
+    if(!feat||!q||!picks.length) return;
+    const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let cur=0, timer=null;
+    const render=()=>{ const d=data[cur]; q.textContent='“'+d.q+'”'; };
+    const paint=(i)=>{
+      const d=data[i];
+      feat.classList.add('swapping');
+      setTimeout(()=>{ render(); av.textContent=d.av; nm.textContent=d.nm; rl.textContent=d.rl; feat.classList.remove('swapping'); },200);
+      picks.forEach((p,j)=>p.classList.toggle('active',j===i));
+    };
+    const arm=()=>{ // restart the active progress bar animation
+      picks.forEach(p=>{p.classList.remove('timing');const b=p.querySelector('.prog');if(b)b.style.cssText='';});
+      const active=picks[cur];if(!active)return;active.style.setProperty('--rec-dur',(DUR/1000)+'s');
+      void active.offsetWidth; active.classList.add('timing');
+    };
+    const show=(i,user)=>{ cur=i; paint(i); if(!reduce) arm(); if(user) restart(); };
+    const next=()=>show((cur+1)%data.length);
+    const stop=()=>{ if(timer){clearInterval(timer);timer=null;} picks.forEach(p=>p.classList.remove('timing')); };
+    const restart=()=>{ if(reduce) return; stop(); arm(); timer=setInterval(next,DUR); };
+    picks.forEach((p,i)=>{ p.addEventListener('click',()=>show(i,true)); });
+    const wrap=document.querySelector('.recs');
+    if(wrap){ wrap.addEventListener('mouseenter',stop); wrap.addEventListener('mouseleave',restart); }
+    show(0); restart();
+  })();
+})();
+</script>
+
+<div id="tweaks-root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#182a4d",
+  "theme": "light",
+  "corners": "soft"
+}/*EDITMODE-END*/;
+
+const LIGHT = {
+  "--bg":"#f6f4ec","--ink":"#182a4d","--ink-2":"#27395d","--muted":"#5d6678",
+  "--muted-2":"#9aa0ad","--line":"#e6e2d8","--line-2":"#dcd8cc","--surface":"#efece3","--surface-2":"#e8e4d9"
+};
+const CHARCOAL = {
+  "--bg":"#0c1322","--ink":"#eef1f7","--ink-2":"#d7dde8","--muted":"#969eb0",
+  "--muted-2":"#646c7e","--line":"#1d2638","--line-2":"#283248","--surface":"#121b2c","--surface-2":"#172134"
+};
+
+function TweaksApp(){
+  const [t,setTweak]=useTweaks(TWEAK_DEFAULTS);
+  React.useEffect(()=>{
+    const root=document.documentElement;
+    const pal = t.theme==='charcoal' ? CHARCOAL : LIGHT;
+    Object.entries(pal).forEach(([k,v])=>root.style.setProperty(k,v));
+    root.style.setProperty('--accent', t.accent);
+    root.style.setProperty('--r', t.corners==='sharp' ? '4px' : '14px');
+  },[t.theme,t.accent,t.corners]);
+  return (
+    <TweaksPanel>
+      <TweakSection label="Theme" />
+      <TweakRadio label="Mode" value={t.theme} options={['light','charcoal']}
+                  onChange={(v)=>setTweak('theme',v)} />
+      <TweakColor label="Accent" value={t.accent}
+                  options={['#182a4d','#2f6db0','#3f8a5b','#c2603f','#7a5ae0']}
+                  onChange={(v)=>setTweak('accent',v)} />
+      <TweakSection label="Shape" />
+      <TweakRadio label="Corners" value={t.corners} options={['soft','sharp']}
+                  onChange={(v)=>setTweak('corners',v)} />
+    </TweaksPanel>
+  );
+}
+ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<TweaksApp/>);
+</script>
+</body>
+</html>

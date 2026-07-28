@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enterprise SEO Case Study · Jonathan Green · Kendall Casey-Green</title>
+<meta name="description" content="How Kendall Casey-Green scaled JonathanGreen.com's organic growth 266% through content architecture and on-page SEO — surviving five major Google Core Updates without relying on backlinks." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#0b1220;--ink-2:#111a2e;--ink-3:#1a2740;
+  --paper:#f7f6f2;--paper-2:#efeee8;--line:#e4e2d8;--line-dark:rgba(255,255,255,.09);
+  --muted:#8993a8;--muted-2:#6b7488;--body:#c9cedb;--body-dark:#aab2c5;
+  --gold:#d9a441;--gold-2:#f0c169;--green:oklch(0.72 0.15 152);--red:#e0684f;
+  --ff-d:"Inter Tight",system-ui,sans-serif;--ff-b:"Inter",system-ui,sans-serif;--ff-m:"JetBrains Mono",ui-monospace,monospace;
+  --r:16px;--container:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth;--eyebrow-scale:1;}
+html[data-eyebrow-lg]{--eyebrow-scale:2;}
+body{background:var(--ink);color:var(--body);font-family:var(--ff-b);font-size:17px;line-height:1.6;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
+section{padding:120px 0;position:relative;}
+.eyebrow{font-family:var(--ff-m);font-size:calc(12px * var(--eyebrow-scale));letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:color-mix(in srgb,var(--gold) 16%,transparent);padding:5px 12px 5px 0;display:flex;align-items:center;gap:12px;width:fit-content;border-radius:6px;}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:var(--gold);display:block;margin-left:12px;}
+h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em;line-height:1.08;color:#fff;margin-top:16px;text-wrap:balance;}
+.lede{color:var(--body-dark);font-size:17px;max-width:56ch;margin-top:18px;line-height:1.6;}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+
+/* ---- progress + nav ---- */
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2));z-index:100;width:0%;transition:width .1s linear;}
+.topnav{position:fixed;top:0;left:0;right:0;z-index:90;background:color-mix(in srgb,var(--ink) 78%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-dark);}
+.topnav-in{max-width:var(--container);margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.brand{font-family:var(--ff-d);font-weight:600;font-size:15px;color:#fff;display:flex;align-items:center;gap:10px;}
+.brand .ar{opacity:.7;transition:transform .2s ease;}
+.brand:hover .ar{transform:translateX(-3px);}
+.navlinks{display:flex;gap:28px;font-size:13.5px;color:var(--muted);}
+.navlinks a{transition:color .2s ease;}
+.navlinks a:hover{color:#fff;}
+.navcta{font-family:var(--ff-b);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:100px;background:var(--gold);color:#171006;transition:background .2s ease,transform .2s ease;white-space:nowrap;flex:none;}
+.navcta:hover{background:var(--gold-2);transform:translateY(-1px);}
+@media(max-width:760px){.navlinks{display:none;}}
+
+/* ---- hero ---- */
+.hero{padding:200px 0 100px;background:
+  radial-gradient(900px 500px at 82% -10%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 60%),
+  linear-gradient(180deg,var(--ink),#0d1526 60%, var(--ink));
+}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:var(--ff-d);font-weight:700;font-size:clamp(38px,5.6vw,72px);letter-spacing:-.035em;line-height:1.0;color:#fff;margin-top:22px;max-width:20ch;text-wrap:balance;}
+.hero .sub{font-size:clamp(17px,1.6vw,20px);color:var(--body-dark);max-width:54ch;margin-top:26px;line-height:1.55;}
+.hero-ctas{display:flex;gap:14px;margin-top:38px;}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-b);font-weight:600;font-size:15px;padding:13px 24px;border-radius:100px;border:1px solid var(--gold);background:var(--gold);color:#171006;transition:transform .2s ease,background .2s ease;}
+.btn:hover{transform:translateY(-2px);background:var(--gold-2);}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.24);}
+.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.06);}
+.stat-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-radius:var(--r);overflow:hidden;margin-top:72px;}
+.stat-c{background:color-mix(in srgb,var(--ink-2) 90%,transparent);padding:28px 22px;}
+.stat-c .n{font-family:var(--ff-d);font-weight:700;font-size:clamp(26px,2.8vw,36px);letter-spacing:-.03em;color:#fff;display:flex;align-items:baseline;gap:6px;}
+.stat-c .n .arrow{color:var(--green);font-size:.55em;}
+.stat-c .l{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.4;}
+@media(max-width:900px){.stat-row{grid-template-columns:repeat(2,1fr);}}
+
+.proof{margin-top:56px;border-radius:20px;overflow:hidden;border:1px solid var(--line-dark);box-shadow:0 30px 60px -32px rgba(0,0,0,.5);}
+.proof img{width:100%;display:block;}
+.proof-cap{font-family:var(--ff-m);font-size:12px;color:var(--muted);margin-top:16px;text-align:center;}
+
+/* ---- challenge ---- */
+.challenge{background:var(--ink-2);border-top:1px solid var(--line-dark);}
+.ch-nums{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px;}
+.ch-card{background:var(--ink-3);border:1px solid var(--line-dark);border-radius:var(--r);padding:30px 30px;}
+.ch-card .tag{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--red);display:flex;align-items:center;gap:8px;}
+.ch-card .tag::before{content:"⚠";font-size:12px;}
+.ch-move{display:flex;align-items:baseline;gap:14px;margin:18px 0 10px;flex-wrap:wrap;}
+.ch-move .from{font-family:var(--ff-d);font-size:26px;font-weight:600;color:var(--muted);}
+.ch-move .ar{color:var(--red);}
+.ch-move .to{font-family:var(--ff-d);font-size:clamp(30px,3.4vw,42px);font-weight:700;letter-spacing:-.03em;color:#fff;}
+.ch-move .pct{font-family:var(--ff-m);font-size:14px;color:var(--red);}
+.ch-card .cap{font-size:14px;color:var(--body-dark);margin-top:6px;}
+.ch-base{display:flex;gap:44px;margin-top:44px;flex-wrap:wrap;}
+.ch-base .b .n{font-family:var(--ff-d);font-weight:700;font-size:30px;color:#fff;letter-spacing:-.02em;}
+.ch-base .b .l{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:6px;}
+.callout{margin-top:48px;border-left:3px solid var(--gold);padding:6px 0 6px 24px;}
+.callout p{font-family:var(--ff-d);font-weight:500;font-size:19px;color:#fff;letter-spacing:-.01em;line-height:1.4;max-width:52ch;}
+
+/* ---- strategy ---- */
+.strat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px;}
+.strat-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:var(--r);padding:30px 26px;transition:border-color .25s ease,transform .25s ease;}
+.strat-card:hover{border-color:color-mix(in srgb,var(--gold) 50%,var(--line-dark));transform:translateY(-4px);}
+.strat-ic{width:42px;height:42px;border-radius:11px;background:color-mix(in srgb,var(--gold) 16%,transparent);display:grid;place-items:center;color:var(--gold);font-family:var(--ff-m);font-weight:600;font-size:14px;}
+.strat-card h3{font-family:var(--ff-d);font-weight:600;font-size:18px;color:#fff;letter-spacing:-.01em;margin-top:20px;}
+.strat-card ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px;}
+.strat-card li{font-size:14px;color:var(--body-dark);padding-left:16px;position:relative;line-height:1.4;}
+.strat-card li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--gold);}
+@media(max-width:900px){.strat-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.strat-grid{grid-template-columns:1fr;}}
+
+/* ---- inflection ---- */
+.inflect{background:var(--ink-2);border-top:1px solid var(--line-dark);}
+.infl-chart{display:flex;align-items:flex-end;gap:60px;height:280px;margin-top:56px;padding:0 20px 0 0;}
+.infl-bar-wrap{display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;flex:1;max-width:220px;}
+.infl-bar-wrap .val{font-family:var(--ff-d);font-weight:700;font-size:28px;color:#fff;letter-spacing:-.02em;margin-bottom:12px;}
+.infl-bar{width:100%;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#2a3c63,#182338);transition:height 1.1s cubic-bezier(.2,.7,.2,1);}
+.infl-bar.hi{background:linear-gradient(180deg,var(--gold-2),var(--gold));}
+.infl-bar-wrap .lab{font-family:var(--ff-m);font-size:13px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px solid var(--line-dark);width:100%;text-align:center;}
+.infl-arrow{align-self:center;color:var(--green);font-size:24px;margin-bottom:60px;}
+.insight-box{margin-top:52px;background:color-mix(in srgb,var(--green) 10%,var(--ink-3));border:1px solid color-mix(in srgb,var(--green) 30%,var(--line-dark));border-radius:var(--r);padding:26px 30px;max-width:60ch;}
+.insight-box .lab{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:8px;}
+.insight-box p{font-family:var(--ff-d);font-weight:500;font-size:19px;color:#fff;letter-spacing:-.01em;}
+
+/* ---- algorithm timeline ---- */
+.tl-scroll{overflow-x:auto;margin-top:56px;padding-bottom:14px;}
+.tl-track{display:flex;gap:0;min-width:max-content;position:relative;padding-top:6px;}
+.tl-track::before{content:"";position:absolute;top:19px;left:0;right:0;height:2px;background:var(--line-dark);}
+.tl-node{display:flex;flex-direction:column;align-items:center;width:172px;flex:none;position:relative;}
+.tl-dot{width:14px;height:14px;border-radius:50%;background:var(--ink-3);border:2px solid var(--muted);z-index:2;}
+.tl-node.core .tl-dot{border-color:var(--red);}
+.tl-node.helpful .tl-dot{border-color:var(--gold);}
+.tl-node.feat .tl-dot{background:var(--gold);border-color:var(--gold);width:18px;height:18px;box-shadow:0 0 0 5px color-mix(in srgb,var(--gold) 24%,transparent);}
+.tl-node .t{font-family:var(--ff-m);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:14px;text-align:center;}
+.tl-node .lbl{font-family:var(--ff-d);font-weight:600;font-size:14px;color:#fff;text-align:center;margin-top:6px;max-width:150px;}
+.tl-node.feat .lbl{color:var(--gold-2);}
+
+.feat-card{margin-top:56px;background:linear-gradient(135deg,var(--ink-3),#20304f);border:1px solid color-mix(in srgb,var(--gold) 35%,var(--line-dark));border-radius:20px;padding:44px 46px;display:flex;justify-content:space-between;gap:40px;align-items:center;flex-wrap:wrap;}
+.feat-badge{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#171006;background:var(--gold-2);padding:6px 14px;border-radius:100px;display:inline-flex;}
+.feat-card h3{font-family:var(--ff-d);font-weight:700;font-size:clamp(24px,2.8vw,32px);color:#fff;letter-spacing:-.025em;margin-top:16px;}
+.feat-nums{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.feat-nums .m{text-align:center;}
+.feat-nums .m .n{font-family:var(--ff-d);font-weight:700;font-size:32px;color:#fff;letter-spacing:-.02em;}
+.feat-nums .m .l{font-family:var(--ff-m);font-size:11px;color:var(--muted);margin-top:6px;}
+.feat-nums .ar2{color:var(--green);font-size:22px;}
+.feat-nums .pct{font-family:var(--ff-m);font-size:15px;color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent);padding:6px 12px;border-radius:100px;}
+
+/* ---- results ---- */
+.results{background:linear-gradient(180deg,var(--ink-2),var(--ink));border-top:1px solid var(--line-dark);}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
+.kpi{background:var(--ink-3);border:1px solid var(--line-dark);border-radius:var(--r);padding:30px 28px;}
+.kpi .lab{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);}
+.kpi .move{display:flex;align-items:baseline;gap:10px;margin-top:16px;flex-wrap:wrap;}
+.kpi .move .from{font-family:var(--ff-d);font-size:18px;color:var(--muted);}
+.kpi .move .ar{color:var(--muted);}
+.kpi .move .to{font-family:var(--ff-d);font-weight:700;font-size:clamp(28px,3vw,36px);letter-spacing:-.03em;color:#fff;}
+.kpi .pct{font-family:var(--ff-m);font-size:13.5px;color:var(--green);margin-top:12px;display:inline-block;background:color-mix(in srgb,var(--green) 14%,transparent);padding:4px 10px;border-radius:100px;}
+.kpi .pct.flat{color:var(--muted);background:color-mix(in srgb,var(--muted) 14%,transparent);}
+.kpi .foot{font-size:13px;color:var(--muted);margin-top:14px;}
+@media(max-width:900px){.kpi-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.kpi-grid{grid-template-columns:1fr;}}
+
+/* ---- business impact ---- */
+.impact{background:var(--ink);border-top:1px solid var(--line-dark);}
+.imp-grid{display:grid;grid-template-columns:1fr;gap:22px;margin-top:52px;}
+.imp-card{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:var(--r);padding:36px;}
+.imp-card .lab{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);}
+.imp-move{display:flex;align-items:baseline;gap:16px;margin:20px 0;flex-wrap:wrap;}
+.imp-move .from{font-family:var(--ff-d);font-size:22px;color:var(--muted);}
+.imp-move .to{font-family:var(--ff-d);font-weight:700;font-size:clamp(32px,3.6vw,44px);letter-spacing:-.03em;color:#fff;}
+.imp-bar{height:9px;border-radius:6px;background:var(--line-dark);overflow:hidden;}
+.imp-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:6px;}
+.imp-card.peak{display:flex;flex-direction:column;justify-content:center;text-align:center;background:linear-gradient(160deg,var(--ink-3),#233457);}
+.imp-card.peak .n{font-family:var(--ff-d);font-weight:800;font-size:clamp(44px,5vw,64px);letter-spacing:-.04em;color:var(--gold-2);}
+.imp-card.peak .l{font-family:var(--ff-m);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:10px;}
+.imp-note{color:var(--body-dark);font-size:15px;max-width:60ch;margin-top:32px;line-height:1.6;}
+@media(max-width:800px){.imp-grid{grid-template-columns:1fr;}}
+
+/* ---- keyword wins ---- */
+.kw{background:var(--ink-2);border-top:1px solid var(--line-dark);}
+.kw-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px;}
+.kw-card{background:var(--ink-3);border:1px solid var(--line-dark);border-radius:var(--r);padding:28px;}
+.kw-card .term{font-family:var(--ff-d);font-weight:600;font-size:19px;color:#fff;letter-spacing:-.01em;}
+.kw-rank{display:flex;align-items:baseline;gap:10px;margin-top:16px;}
+.kw-rank .n{font-family:var(--ff-d);font-weight:800;font-size:42px;color:var(--gold-2);letter-spacing:-.03em;}
+.kw-rank .l{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;color:var(--muted);}
+.kw-card .vol{font-size:14px;color:var(--body-dark);margin-top:12px;}
+.kw-total{margin-top:36px;display:flex;align-items:baseline;gap:16px;}
+.kw-total .n{font-family:var(--ff-d);font-weight:700;font-size:30px;color:#fff;letter-spacing:-.02em;}
+.kw-total .l{font-family:var(--ff-m);font-size:12.5px;color:var(--muted);}
+.kw-tbl{width:100%;border-collapse:collapse;margin-top:20px;}
+.kw-tbl th{font-family:var(--ff-m);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:400;text-align:left;padding:0 10px 10px 0;border-bottom:1px solid var(--line-dark);}
+.kw-tbl td{padding:12px 10px 12px 0;border-bottom:1px solid var(--line-dark);font-size:13.5px;color:var(--body-dark);vertical-align:top;}
+.kw-tbl td:first-child{color:#fff;font-weight:500;white-space:nowrap;}
+.kw-tbl tr:last-child td{border-bottom:none;}
+.kw-tbl .pos{font-family:var(--ff-m);color:var(--gold-2);font-weight:600;}
+.kw-tbl .url{font-family:var(--ff-m);font-size:12px;word-break:break-all;}
+.kw-note{font-size:13.5px;color:var(--body-dark);margin-top:16px;line-height:1.55;}
+
+/* ---- comparison ---- */
+.compare2{background:var(--ink);border-top:1px solid var(--line-dark);}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:52px;}
+.comp-col{border-radius:var(--r);padding:32px;}
+.comp-col.typ{background:var(--ink-2);border:1px solid var(--line-dark);}
+.comp-col.mine{background:linear-gradient(160deg,var(--ink-3),#20304f);border:1px solid color-mix(in srgb,var(--gold) 35%,var(--line-dark));}
+.comp-col h4{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);}
+.comp-col.mine h4{color:var(--gold-2);}
+.comp-row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-top:1px solid var(--line-dark);}
+.comp-col > .comp-row:first-of-type{border-top:none;margin-top:22px;}
+.comp-row .k{font-size:15px;color:var(--body-dark);}
+.comp-row .v{font-family:var(--ff-m);font-size:14px;font-weight:500;}
+.comp-row .v.up{color:var(--red);}
+.comp-row .v.flat{color:var(--muted);}
+.comp-row .v.win{color:var(--green);}
+.thesis{margin-top:44px;border-left:3px solid var(--gold);padding:6px 0 6px 24px;max-width:60ch;}
+.thesis p{font-family:var(--ff-d);font-weight:500;font-size:19px;color:#fff;line-height:1.4;letter-spacing:-.01em;}
+@media(max-width:760px){.comp-grid{grid-template-columns:1fr;}}
+
+/* ---- final ---- */
+.finale{background:radial-gradient(800px 500px at 50% 0%, color-mix(in srgb,var(--gold) 14%,transparent), transparent 65%), var(--ink);border-top:1px solid var(--line-dark);text-align:center;padding:140px 0 120px;}
+.finale h2{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4.4vw,52px);letter-spacing:-.03em;color:#fff;max-width:26ch;margin:20px auto 0;text-wrap:balance;}
+.finale p.body{color:var(--body-dark);max-width:66ch;margin:26px auto 0;font-size:16.5px;line-height:1.65;}
+.finale .bold{font-family:var(--ff-d);font-weight:600;font-size:clamp(19px,2.1vw,24px);color:#fff;max-width:44ch;margin:40px auto 0;letter-spacing:-.015em;line-height:1.4;}
+.finale .actions{display:flex;gap:14px;justify-content:center;margin-top:44px;flex-wrap:wrap;}
+
+footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink);}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--ff-m);font-size:12px;color:var(--muted);max-width:var(--container);margin:0 auto;padding:0 32px;}
+
+.eyebrow-toggle{position:fixed;bottom:22px;right:22px;z-index:95;font-family:var(--ff-m);font-size:11.5px;letter-spacing:.04em;padding:10px 16px;border-radius:100px;background:var(--ink-3);border:1px solid var(--line-dark);color:var(--on-dark-mut,#aab2c5);cursor:pointer;transition:border-color .2s ease,color .2s ease;}
+.eyebrow-toggle:hover{border-color:var(--gold);color:#fff;}
+.eyebrow-toggle.on{color:var(--gold-2);border-color:var(--gold);}
+@media(max-width:900px){section{padding:80px 0;}.stat-row{margin-top:52px;}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<nav class="topnav">
+  <div class="topnav-in">
+    <a class="brand" href="Kendall%20Portfolio.html#work"><span class="ar">←</span> Kendall Casey-Green</a>
+    <div class="navlinks">
+      <a href="#challenge">Challenge</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#results">Results</a>
+      <a href="#impact">Impact</a>
+    </div>
+    <a class="navcta" href="#results">View Results</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow reveal in">Enterprise SEO Case Study</div>
+      <h1 class="reveal in">I use on-page and technical SEO to grow organic traffic.</h1>
+      <p class="sub reveal in">Through content strategy, technical SEO, and on-page optimization — sustained growth that survived Google's toughest algorithm years.</p>
+      <div class="hero-ctas reveal in">
+        <a class="btn" href="#results">View Results</a>
+        <a class="btn ghost" href="#challenge">See the Challenge</a>
+      </div>
+      <div class="stat-row reveal in">
+        <div class="stat-c"><div class="n"><span class="arrow">↑</span>266%</div><div class="l">Organic Traffic</div></div>
+        <div class="stat-c"><div class="n"><span class="arrow">↑</span>287%</div><div class="l">Page One Rankings</div></div>
+        <div class="stat-c"><div class="n"><span class="arrow">↑</span>364%</div><div class="l">Top 3 Rankings</div></div>
+        <div class="stat-c"><div class="n">5+</div><div class="l">Google Core Updates Survived</div></div>
+        <div class="stat-c"><div class="n">40 → 39</div><div class="l">Authority Score — growth came without backlink dependence</div></div>
+      </div>
+      <div class="proof reveal in">
+        <img src="images/seo-card-desktop-mobile-v2.png" alt="Jonathan Green ranking in Google search results for natural lawn fertilizer, shown on desktop and mobile with AI Overview" />
+      </div>
+      <div class="proof-cap">Jonathan Green ranking organically for natural lawn fertilizer — desktop and mobile</div>
+    </div>
+  </section>
+
+  <section class="challenge" id="challenge">
+    <div class="wrap">
+      <div class="eyebrow reveal">The Challenge</div>
+      <h2 class="h reveal">Rapid growth exposed real weaknesses.</h2>
+      <p class="lede reveal">JonathanGreen.com entered 2019 with 17,028 monthly organic visits and 15,239 ranking keywords. As Google's Core Updates rolled out, cracks in the foundation showed.</p>
+
+      <div class="ch-nums">
+        <div class="ch-card reveal">
+          <div class="tag">November 2021 Core Update</div>
+          <div class="ch-move"><span class="from">81,944</span><span class="ar">→</span><span class="to">57,665</span><span class="pct">−29.6%</span></div>
+          <div class="cap">Monthly organic traffic</div>
+        </div>
+        <div class="ch-card reveal">
+          <div class="tag">2022 Core Update</div>
+          <div class="ch-move"><span class="from">91,629</span><span class="ar">→</span><span class="to">52,423</span><span class="pct">−42.8%</span></div>
+          <div class="cap">Monthly organic traffic</div>
+        </div>
+      </div>
+
+      <div class="ch-base reveal">
+        <div class="b"><div class="n">17,028</div><div class="l">2019 monthly visits</div></div>
+        <div class="b"><div class="n">15,239</div><div class="l">2019 ranking keywords</div></div>
+      </div>
+
+      <div class="callout reveal">
+        <p>Rapid content expansion alone wasn't enough. The site needed stronger information architecture, topical authority, content quality, and better internal linking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="strategy">
+    <div class="wrap">
+      <div class="eyebrow reveal">My Strategy</div>
+      <h2 class="h reveal">Four pillars, built to compound.</h2>
+      <div class="strat-grid">
+        <div class="strat-card reveal">
+          <div class="strat-ic">01</div>
+          <h3>Content Architecture</h3>
+          <ul>
+            <li>Built scalable content hubs</li>
+            <li>Expanded topical authority</li>
+            <li>Organized content around user intent</li>
+            <li>Improved semantic relevance</li>
+          </ul>
+        </div>
+        <div class="strat-card reveal">
+          <div class="strat-ic">02</div>
+          <h3>On-Page SEO</h3>
+          <ul>
+            <li>Optimized title tags</li>
+            <li>Meta descriptions</li>
+            <li>Heading hierarchy</li>
+            <li>Internal linking &amp; content optimization</li>
+          </ul>
+        </div>
+        <div class="strat-card reveal">
+          <div class="strat-ic">03</div>
+          <h3>Technical SEO</h3>
+          <ul>
+            <li>Improved crawlability</li>
+            <li>Site structure</li>
+            <li>Content consolidation</li>
+            <li>Technical health</li>
+          </ul>
+        </div>
+        <div class="strat-card reveal">
+          <div class="strat-ic">04</div>
+          <h3>Algorithm Resilience</h3>
+          <ul>
+            <li>High-quality evergreen content</li>
+            <li>No algorithm-loophole chasing</li>
+            <li>Built to withstand Core Updates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inflect">
+    <div class="wrap">
+      <div class="eyebrow reveal">The Inflection Point</div>
+      <h2 class="h reveal">Keyword footprint nearly doubled in one quarter.</h2>
+      <p class="lede reveal">March 2023 to June 2023 — from 30,362 to 60,392 ranking keywords.</p>
+      <div class="infl-chart">
+        <div class="infl-bar-wrap reveal">
+          <div class="val">30,362</div>
+          <div class="infl-bar" data-h="50" style="height:0"></div>
+          <div class="lab">MAR 2023</div>
+        </div>
+        <div class="infl-arrow reveal">→</div>
+        <div class="infl-bar-wrap reveal">
+          <div class="val">60,392</div>
+          <div class="infl-bar hi" data-h="100" style="height:0"></div>
+          <div class="lab">JUN 2023</div>
+        </div>
+      </div>
+      <div class="insight-box reveal">
+        <div class="lab">Insight</div>
+        <p>I turned fewer, higher-quality pages into more traffic. I consolidated overlapping content into single authoritative pages, so even as total keyword count later dropped, traffic kept climbing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="wrap">
+      <div class="eyebrow reveal">Algorithm Update Timeline</div>
+      <h2 class="h reveal">Every Google update, and what I did about it.</h2>
+      <p class="lede reveal">Red markers are Google's updates, out of my control. Gold markers are the work I did in direct response to each one.</p>
+      <div class="tl-scroll reveal">
+        <div class="tl-track">
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">Nov 2021 · Google</div><div class="lbl">Core Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2022 · Me</div><div class="lbl">Rebuilt Content Architecture</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">May 2022 · Google</div><div class="lbl">Core Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2022 · Me</div><div class="lbl">Expanded Topical Authority</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">2022 · Google</div><div class="lbl">Helpful Content Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2022 · Me</div><div class="lbl">Cut Thin, Low-Value Pages</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">Sep 2022 · Google</div><div class="lbl">Core Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2023 · Me</div><div class="lbl">Consolidated Duplicate Content</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">Sep 2023 · Google</div><div class="lbl">Helpful Content Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2023 · Me</div><div class="lbl">Rewrote for E-E-A-T</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">Oct–Nov 2023 · Google</div><div class="lbl">Core Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2024 · Me</div><div class="lbl">Strengthened Internal Linking</div></div>
+          <div class="tl-node feat core"><div class="tl-dot"></div><div class="t">Mar 2024 · Google</div><div class="lbl">Core Update ↓ featured below</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">Apr 2024 · Me</div><div class="lbl">Recovered Above Prior Levels</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">Dec 2024 · Google</div><div class="lbl">Core Update</div></div>
+          <div class="tl-node helpful"><div class="tl-dot"></div><div class="t">2025 · Me</div><div class="lbl">Refined On-Page Signals</div></div>
+          <div class="tl-node core"><div class="tl-dot"></div><div class="t">Mar &amp; Jun 2025 · Google</div><div class="lbl">Core Updates</div></div>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div>
+          <span class="feat-badge">Recovered Above Pre-Update Levels</span>
+          <h3>March 2024: the update that could have sunk five years of work — I made it the strongest month yet.</h3>
+        </div>
+        <div class="feat-nums">
+          <div class="m"><div class="n">51,254</div><div class="l">MARCH LOW</div></div>
+          <div class="ar2">→</div>
+          <div class="m"><div class="n">74,221</div><div class="l">APRIL</div></div>
+          <span class="pct">+44.8%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <div class="wrap">
+      <div class="eyebrow reveal">The Results</div>
+      <h2 class="h reveal">The numbers, end to end.</h2>
+      <div class="kpi-grid">
+        <div class="kpi reveal">
+          <div class="lab">Organic Traffic</div>
+          <div class="move"><span class="from">17,028</span><span class="ar">→</span><span class="to">62,268</span></div>
+          <span class="pct">+266%</span>
+          <div class="foot">Peak: 91,629 monthly visits</div>
+        </div>
+        <div class="kpi reveal">
+          <div class="lab">Organic Keywords</div>
+          <div class="move"><span class="from">15,239</span><span class="ar">→</span><span class="to">49,493</span></div>
+          <span class="pct">+225%</span>
+          <div class="foot">Ranking keywords, 2019 → 2025</div>
+        </div>
+        <div class="kpi reveal">
+          <div class="lab">Page One Rankings</div>
+          <div class="move"><span class="from">1,470</span><span class="ar">→</span><span class="to">5,684</span></div>
+          <span class="pct">+287%</span>
+          <div class="foot">Keywords ranking on page one</div>
+        </div>
+        <div class="kpi reveal">
+          <div class="lab">Top 3 Rankings</div>
+          <div class="move"><span class="from">390</span><span class="ar">→</span><span class="to">1,808</span></div>
+          <span class="pct">+364%</span>
+          <div class="foot">Keywords ranking in the top 3</div>
+        </div>
+        <div class="kpi reveal">
+          <div class="lab">Semrush Rank</div>
+          <div class="move"><span class="from">85,476</span><span class="ar">→</span><span class="to">34,976</span></div>
+          <span class="pct">59% Better</span>
+          <div class="foot">Lower is stronger</div>
+        </div>
+        <div class="kpi reveal">
+          <div class="lab">Authority Score</div>
+          <div class="move"><span class="from">40</span><span class="ar">→</span><span class="to">39</span></div>
+          <span class="pct flat">Flat</span>
+          <div class="foot">Growth wasn't bought with backlinks</div>
+        </div>
+      </div>
+      <div class="insight-box reveal" style="margin-top:56px;">
+        <div class="lab">Insight</div>
+        <p>Traffic nearly quadrupled while Authority Score stayed flat. I did that with content architecture and on-page SEO, not backlink acquisition — proof the growth was earned, not bought.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="impact">
+    <div class="wrap">
+      <div class="eyebrow reveal">Business Impact</div>
+      <h2 class="h reveal">What that traffic was worth.</h2>
+      <div class="imp-grid">
+        <div class="imp-card reveal">
+          <div class="lab">Paid Search Equivalent</div>
+          <div class="imp-move"><span class="from">2019 · $261,962</span><span class="ar">→</span><span class="to">2025 · $491,624</span></div>
+          <div class="imp-bar"><i style="width:88%"></i></div>
+          <div class="foot" style="margin-top:14px;color:var(--body-dark);font-size:14px;">+87.6% — what this traffic would have cost to buy in paid search</div>
+          <p style="font-size:13px;color:var(--muted);margin-top:16px;line-height:1.55;">I calculated this by taking each year's organic clicks per keyword and multiplying by that keyword's average Google Ads CPC, then summing across the ranking keyword set — the standard way to price organic traffic against what it would cost in paid media.</p>
+        </div>
+      </div>
+      <p class="imp-note reveal">Organic growth reduced dependency on paid acquisition while increasing visibility for category-defining search terms.</p>
+    </div>
+  </section>
+
+  <section class="kw">
+    <div class="wrap">
+      <div class="eyebrow reveal">Keyword Wins</div>
+      <h2 class="h reveal">Optimized on-page SEO for high-volume, high-intent keywords.</h2>
+      <p class="lede reveal">Two real examples of that on-page optimization work in action.</p>
+      <div class="kw-grid">
+        <div class="kw-card reveal">
+          <div class="term">Example 1 · Organic Lawn Fertilizer</div>
+          <table class="kw-tbl">
+            <thead><tr><th>Date</th><th>Position</th><th>Volume</th><th>URL</th></tr></thead>
+            <tbody>
+              <tr><td>Jan 2019</td><td class="pos">#22</td><td>2,900</td><td class="url">/organic-lawn-care.html</td></tr>
+              <tr><td>Jun 2021</td><td class="pos">#6</td><td>5,400</td><td class="url">/product/organic-lawn-food.html</td></tr>
+              <tr><td>Jun 2023</td><td class="pos">#6</td><td>3,600</td><td class="url">/product/organic-lawn-food.html</td></tr>
+              <tr><td>Now</td><td class="pos">#1</td><td>5,400</td><td class="url">/product/organic-lawn-food.html</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="kw-card reveal">
+          <div class="term">Example 2 · Soil pH Test Kit</div>
+          <table class="kw-tbl">
+            <thead><tr><th>Date</th><th>Position</th><th>Volume</th><th>URL</th></tr></thead>
+            <tbody>
+              <tr><td>Jan 2019</td><td class="pos">#18</td><td>1,900</td><td class="url">/product/soil-ph-test-kit.html</td></tr>
+              <tr><td>Jun 2021</td><td class="pos">#9</td><td>3,600</td><td class="url">/product/soil-ph-test-kit.html</td></tr>
+              <tr><td>Jun 2023</td><td class="pos">#12</td><td>1,900</td><td class="url">/product/soil-ph-test-kit-for-lawns <span style="color:var(--muted)">(URL migrated, dipped)</span></td></tr>
+              <tr><td>Now</td><td class="pos">#3</td><td>9,900</td><td class="url">/product/soil-ph-test-kit-for-lawns</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="kw-total reveal">
+        <div class="n">15,300</div>
+        <div class="l">MONTHLY SEARCHES · COMBINED VOLUME OF THESE TWO TERMS</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare2">
+    <div class="wrap">
+      <div class="eyebrow reveal">Why This Matters</div>
+      <h2 class="h reveal">Why hiring managers should care.</h2>
+      <div class="comp-grid">
+        <div class="comp-col typ reveal">
+          <h4>Typical SEO Growth</h4>
+          <div class="comp-row"><span class="k">Backlinks</span><span class="v up">↑ Rising</span></div>
+          <div class="comp-row"><span class="k">Authority Score</span><span class="v up">↑ Rising</span></div>
+          <div class="comp-row"><span class="k">Rankings</span><span class="v up">↑ Rising</span></div>
+        </div>
+        <div class="comp-col mine reveal">
+          <h4>My Approach</h4>
+          <div class="comp-row"><span class="k">Authority Score</span><span class="v flat">Flat</span></div>
+          <div class="comp-row"><span class="k">Backlinks</span><span class="v flat">Flat</span></div>
+          <div class="comp-row"><span class="k">Organic Traffic</span><span class="v win">+266%</span></div>
+          <div class="comp-row"><span class="k">Page One Rankings</span><span class="v win">+287%</span></div>
+          <div class="comp-row"><span class="k">Top 3 Rankings</span><span class="v win">+364%</span></div>
+        </div>
+      </div>
+      <div class="thesis reveal">
+        <p>The growth engine was content strategy, site architecture, internal linking, and on-page SEO — not link building.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="finale">
+    <div class="wrap">
+      <div class="eyebrow reveal" style="justify-content:center;">Conclusion</div>
+      <h2 class="reveal">Enterprise SEO that withstood Google's toughest years.</h2>
+      <p class="body reveal">From 2019 through 2025, JonathanGreen.com successfully navigated more than five major Google Core and Helpful Content Updates while dramatically expanding its organic footprint. Rather than relying on aggressive backlink campaigns, the strategy centered on scalable content architecture, technical optimization, internal linking, and high-quality on-page SEO.</p>
+      <p class="body reveal">The result was sustained, defensible organic growth that continued to recover and outperform after every major algorithm change.</p>
+      <p class="bold reveal">If you're hiring someone to build sustainable organic growth — not temporary SEO wins — this case study demonstrates exactly that capability.</p>
+      <div class="actions reveal">
+        <a class="btn" href="https://www.jonathangreen.com/" target="_blank" rel="noopener">Visit live site ↗</a>
+        <a class="btn ghost" href="Kendall%20Portfolio.html#work">Back to portfolio</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>© 2026 Kendall Casey-Green · Austin, Texas</span>
+    <span>Jonathan Green · Enterprise SEO Case Study</span>
+  </div>
+</footer>
+
+<button class="eyebrow-toggle" id="eyebrowToggle" type="button">Aa Label size</button>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  function onScroll(){
+    var h=document.documentElement;
+    var pct=(h.scrollTop||document.body.scrollTop)/((h.scrollHeight||document.body.scrollHeight)-h.clientHeight)*100;
+    bar.style.width=pct+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var revealEls=document.querySelectorAll('.reveal');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  revealEls.forEach(function(el){ io.observe(el); });
+
+  var bars=document.querySelectorAll('.infl-bar');
+  var barIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.style.height=e.target.getAttribute('data-h')+'%'; barIO.unobserve(e.target); }
+    });
+  },{threshold:.4});
+  bars.forEach(function(b){ barIO.observe(b); });
+
+  var KEY='kw-eyebrow-lg';
+  var btn=document.getElementById('eyebrowToggle');
+  function apply(on){
+    document.documentElement.toggleAttribute('data-eyebrow-lg',on);
+    btn.classList.toggle('on',on);
+    btn.textContent=on?'Aa Label size: 2×':'Aa Label size';
+  }
+  apply(localStorage.getItem(KEY)==='1');
+  btn.addEventListener('click',function(){
+    var on=!document.documentElement.hasAttribute('data-eyebrow-lg');
+    localStorage.setItem(KEY,on?'1':'0');
+    apply(on);
+  });
+})();
+</script>
+
+</body>
+</html>
