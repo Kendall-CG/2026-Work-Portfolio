@@ -72,7 +72,8 @@ header.nav.scrolled{background:color-mix(in srgb,var(--ink) 92%, transparent);bo
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--ff-display);font-weight:600;font-size:18px;letter-spacing:-0.02em;}
 .brand .mark{width:24px;height:24px;border-radius:7px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:600;}
 .nav-links{display:flex;align-items:center;gap:34px;}
-.nav-links a{font-size:14.5px;color:var(--muted);transition:color .2s ease;position:relative;}
+.nav-links a{font-size:14.5px;color:var(--muted);transition:color .2s ease;position:relative;text-decoration:none;text-underline-offset:4px;}
+.nav-links a:hover{text-decoration:underline;}
 .nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .nav-cta{display:flex;align-items:center;gap:18px;}
 .status{display:flex;align-items:center;gap:8px;font-family:var(--ff-mono);font-size:12px;color:var(--muted);}
@@ -90,7 +91,7 @@ header.nav.scrolled{background:color-mix(in srgb,var(--ink) 92%, transparent);bo
 .burger.open span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg);}
 
 /* ---------- hero ---------- */
-.hero{padding:96px 0 84px;}
+.hero{padding:96px 0 0;}
 .hero .eyebrow{margin-bottom:30px;}
 .hero h1{
   font-family:var(--ff-display);
@@ -110,10 +111,10 @@ header.nav.scrolled{background:color-mix(in srgb,var(--ink) 92%, transparent);bo
 .hero-meta .v{font-size:15px;font-weight:500;}
 
 /* marquee strip */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;margin-top:40px;}
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;margin-top:50px;margin-bottom:10px;}
 .marquee{display:flex;gap:56px;width:max-content;animation:scroll 28s linear infinite;}
-.marquee span{font-family:var(--ff-display);font-size:15px;color:var(--muted);display:flex;align-items:center;gap:56px;white-space:nowrap;}
-.marquee span::after{content:"/";color:var(--muted-2);font-size:14px;}
+.marquee span{font-family:var(--ff-display);font-weight:700;font-size:18px;color:var(--btn-ink);display:flex;align-items:center;gap:56px;white-space:nowrap;}
+.marquee span::after{content:"|";color:var(--muted-2);font-size:16px;}
 @keyframes scroll{to{transform:translateX(-50%);}}
 
 /* ---------- section frame ---------- */
@@ -160,33 +161,21 @@ section{padding:104px 0;}
 .exp-row .role span{display:block;font-family:var(--ff-body);font-size:15px;font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0;}
 .exp-row .co{font-size:15px;color:var(--muted);text-align:right;}
 
-/* experience — grouped by company (Option 2) */
-.exp-groups{display:flex;flex-direction:column;}
-.exp-group{display:grid;grid-template-columns:248px 1fr;gap:40px;padding:30px 0;border-top:1px solid var(--line);}
-.exp-group:last-child{border-bottom:1px solid var(--line);}
-.exp-co{display:flex;align-items:center;gap:14px;}
-.exp-logo{width:48px;height:48px;flex:none;border-radius:11px;background:#fff;border:1.5px solid #16171a;overflow:hidden;display:grid;place-items:center;box-shadow:0 4px 12px -6px rgba(24,42,77,0.28);}
-.exp-logo img{width:100%;height:100%;object-fit:contain;display:block;}
-.exp-logo.mono{background:var(--ink);color:#f6f4ec;font-family:var(--ff-display);font-weight:600;font-size:14px;letter-spacing:0.01em;}
-.exp-co .co-name{font-family:var(--ff-display);font-weight:600;font-size:17px;letter-spacing:-0.01em;line-height:1.15;}
-.exp-co .co-period{font-family:var(--ff-mono);font-size:11px;color:var(--muted-2);margin-top:3px;}
-.exp-roles{display:flex;flex-direction:column;gap:18px;}
-.exp-role .role-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;}
-.exp-role .role-title{font-family:var(--ff-display);font-weight:600;font-size:18px;letter-spacing:-0.012em;}
-.exp-role .role-yr{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);flex:none;}
-.exp-role .role-sub{margin:5px 0 0;color:var(--muted);font-size:14.5px;line-height:1.5;}
+/* experience — resume cards (Option 5) */
+.exp-cards{display:flex;flex-direction:column;gap:14px;}
+.exp-card{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:flex-start;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:13px;padding:22px 24px;transition:background .2s ease,border-color .2s ease,transform .2s ease;}
+.exp-card:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.22);transform:translateY(-2px);}
+.exp-card-logo{width:52px;height:52px;flex:none;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;}
+.exp-card-logo img{width:82%;height:82%;object-fit:contain;display:block;}
+.exp-card-role{font-family:var(--ff-display);font-weight:600;font-size:18px;letter-spacing:-0.012em;margin:0 0 2px;color:#d49a3c;}
+.exp-card-co{font-size:14px;font-weight:500;color:#aab2c5;margin-bottom:7px;}
+.exp-card-sub{margin:0;color:#cfd5e0;font-size:14px;line-height:1.5;max-width:58ch;}
+.exp-card-yr{font-family:var(--ff-mono);font-size:11.5px;color:#9aa6bd;white-space:nowrap;}
 /* experience — navy band */
 #experience{background:var(--ink);}
 #experience .sec-head h2{color:#fff;}
 #experience .sec-head{border-bottom:none;padding-bottom:0;margin-bottom:28px;}
 #experience .sec-head .num{color:#9aa6bd;}
-#experience .exp-group{border-top-color:rgba(255,255,255,0.14);}
-#experience .exp-group:last-child{border-bottom-color:rgba(255,255,255,0.14);}
-#experience .exp-co .co-name{color:#fff;}
-#experience .exp-co .co-period{color:#aab2c5;}
-#experience .exp-role .role-title{color:#fff;}
-#experience .exp-role .role-yr{color:#aab2c5;}
-#experience .exp-role .role-sub{color:#cfd5e0;}
 
 /* ---------- contact ---------- */
 .contact{text-align:center;padding:130px 0;}
@@ -201,8 +190,8 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
 .foot-inner .copy{font-family:var(--ff-mono);font-size:12px;color:var(--muted-2);}
 .socials{display:flex;gap:26px;}
-.socials a{font-size:14px;color:var(--muted);transition:color .2s ease;}
-.socials a:hover{color:var(--ink);}
+.socials a{font-size:14px;color:var(--muted);transition:color .2s ease;text-decoration:none;text-underline-offset:4px;}
+.socials a:hover{color:var(--ink);text-decoration:underline;}
 
 /* ---------- reveal ---------- */
 /* Hidden base only applies when motion is OK AND js has armed it; default = visible */
@@ -214,7 +203,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 /* ---------- mobile ---------- */
 @media(max-width:980px){
   .work-grid{gap:48px 32px;}
-  .about-grid{grid-template-columns:1fr;gap:40px;height:auto!important;}
+  .about-grid{grid-template-columns:1fr;gap:40px;height:auto!important;justify-items:center;}
   .about image-slot{aspect-ratio:2/3;max-width:320px;height:auto;}
 }
 @media(max-width:809px){
@@ -223,13 +212,14 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
   .burger{display:flex;}
   .nav-cta{gap:0;}
   .work-grid{grid-template-columns:1fr;gap:40px;}
-  .hero{padding:64px 0 56px;}
+  .hero{padding:64px 0 0;}
   .hero-foot{flex-direction:column;align-items:flex-start;gap:28px;}
   .hero-meta{gap:32px;}
   section{padding:72px 0;}
   .exp-row{grid-template-columns:1fr;gap:6px;}
   .exp-row .co{text-align:left;}
-  .exp-group{grid-template-columns:1fr;gap:18px;}
+  .exp-card{grid-template-columns:auto 1fr;}
+  .exp-card-yr{grid-column:2;margin-top:2px;}
   .mobile-menu.open{display:flex;}
 }
 .mobile-menu{display:none;position:fixed;inset:72px 0 0;z-index:50;background:var(--bg);flex-direction:column;padding:28px var(--gutter);gap:6px;}
@@ -237,7 +227,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .mobile-menu .btn{margin-top:24px;justify-content:center;font-size:16px;padding:14px;}
 
 /* ---------- results / stats (Option B — inverted navy block) ---------- */
-.stats{padding:64px 0;}
+.stats{padding:50px 0 64px;}
 .stats-band{background:var(--ink);border-radius:20px;overflow:hidden;}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
 .stat{padding:48px 34px;border-right:1px solid rgba(255,255,255,.12);}
@@ -255,6 +245,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .win:last-child{border-right:none;}
 .win .n{font-family:var(--ff-display);font-weight:600;font-size:clamp(46px,5.4vw,76px);letter-spacing:-0.035em;line-height:1;color:#f6f4ec;}
 .win .n em{font-style:normal;color:var(--btn,#d49a3c);}
+.win .n .yoy{font-family:var(--ff-mono);font-size:15px;font-weight:500;color:#7fc98f;vertical-align:middle;margin-right:6px;}
 .win .t{font-family:var(--ff-display);font-weight:600;font-size:19px;letter-spacing:-0.01em;color:#f6f4ec;margin-top:20px;}
 .win .d{font-size:15px;line-height:1.55;color:#aab4c6;margin-top:8px;max-width:34ch;}
 @media(max-width:809px){.wins{grid-template-columns:1fr;}.win{border-right:none;}.win:first-child{border-bottom:1px solid rgba(255,255,255,.12);}.wins-head{padding:30px 24px 0;}.win{padding:28px 24px 34px;}}
@@ -287,7 +278,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .recs .av{border-radius:50%;display:grid;place-items:center;font-family:var(--ff-display);font-weight:600;flex:none;}
 .rec-feat{position:relative;background:var(--ink);color:#f6f4ec;border-radius:18px;padding:46px;display:flex;flex-direction:column;min-height:330px;overflow:hidden;}
 .rec-mark{font-family:var(--ff-display);font-weight:600;font-size:62px;line-height:.5;color:#46577a;height:32px;}
-.rec-q{font-family:var(--ff-display);font-weight:500;font-size:clamp(21px,2.3vw,29px);line-height:1.3;letter-spacing:-0.02em;margin:31px 0 13px;text-wrap:pretty;border:none;font-style:normal;transition:opacity .25s ease;}
+.rec-q{font-family:var(--ff-display);font-weight:500;font-size:clamp(21px,2.3vw,29px);line-height:1.3;letter-spacing:-0.02em;margin:8px 0 13px;text-wrap:pretty;border:none;font-style:normal;transition:opacity .25s ease;}
 .rec-who{display:flex;align-items:center;gap:14px;margin-top:auto;transition:opacity .25s ease;}
 .rec-feat.swapping .rec-q,.rec-feat.swapping .rec-who,.rec-feat.swapping .rec-more{opacity:0;}
 .rec-more{align-self:flex-start;margin:0 0 auto;background:none;border:none;padding:0;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;color:#cdd8ea;cursor:pointer;border-bottom:1px solid #46577a;transition:color .2s ease,border-color .2s ease,opacity .25s ease;}
@@ -333,7 +324,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 @media(max-width:980px){.hero-grid{gap:40px;}}
 @media(max-width:809px){
   .hero-grid{grid-template-columns:1fr;gap:36px;}
-  .hero-photo{justify-content:flex-start;}
+  .hero-photo{justify-content:center;}
   .arch-frame{width:min(340px,100%);}
   .hero-copy p{font-size:17px;}
 }
@@ -371,7 +362,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
       <div class="hero-copy">
         <div class="kicker reveal">E-Commerce &amp; Marketing Leadership</div>
         <h1 class="reveal">Commerce That Converts</h1>
-        <p class="reveal">I'm a Director of E-Commerce and Digital Marketing who runs the storefront, brand, and demand as one revenue engine. Known for sharp attention to detail, strong project management, and an eye for design, I build DTC operations that perform: a storefront grown from $10K to $2.5M, net sales up 45%, AOV up 30%, and an Amazon channel scaled ~43% a year to $10.56M annually.</p>
+        <p class="reveal">I'm a Director of E-Commerce and Digital Marketing who runs the storefront, brand, and demand as one revenue engine. I build DTC operations that perform: a storefront grown from $10K to $2.5M, net sales up 45%, and an Amazon channel scaled ~43% a year to $10.56M annually.</p>
         <div class="hero-cta reveal">
           <a href="#work" class="btn btn-lg">View Work</a>
           <a href="assets/Kendall-Casey-Green-Resume.pdf" target="_blank" rel="noopener" class="reel"><span class="circ" aria-hidden="true">→</span> Download Resume</a>
@@ -387,8 +378,8 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
     </div>
     <div class="strip reveal">
       <div class="marquee">
-        <span>E-Commerce</span><span>Paid Media</span><span>Amazon</span><span>SEO</span><span>Email &amp; Lifecycle</span><span>Brand &amp; Content</span><span>Team Leadership</span>
-        <span>E-Commerce</span><span>Paid Media</span><span>Amazon</span><span>SEO</span><span>Email &amp; Lifecycle</span><span>Brand &amp; Content</span><span>Team Leadership</span>
+        <span>E-Commerce</span><span>Paid Media</span><span>Amazon</span><span>SEO &amp; GEO</span><span>Email &amp; Retention</span><span>Brand Strategy</span><span>Team Leadership</span>
+        <span>E-Commerce</span><span>Paid Media</span><span>Amazon</span><span>SEO &amp; GEO</span><span>Email &amp; Retention</span><span>Brand Strategy</span><span>Team Leadership</span>
       </div>
     </div>
   </section>
@@ -405,12 +396,10 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <div class="win reveal">
             <div class="n">$10K <em>→</em> $2.5M</div>
             <div class="t">Built the DTC storefront into a multi-million-dollar business</div>
-            <div class="d">Owned the site, brand, and growth end to end — from a near-zero store to $2.5M in annual revenue.</div>
           </div>
           <div class="win reveal">
-            <div class="n"><em>~43%</em> / yr</div>
-            <div class="t">Grew Amazon to $10.56M a year, three years running</div>
-            <div class="d">$23.1M in cumulative revenue, compounding ~43% annually while ad efficiency climbed to 8.07x ROAS.</div>
+            <div class="n"><span class="yoy">▲</span><em>~43%</em> / yr</div>
+            <div class="t">Grew Amazon revenue ~43% a year, three years running, to $10.56M annually</div>
           </div>
         </div>
       </div>
@@ -430,10 +419,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <a class="thumb" href="Jonathan-Green-Case-Study.html"><image-slot id="work1" src="images/jg-dtc-laptop-mobile.png" fit="cover" placeholder="Jonathan Green" radius="14"></image-slot></a>
           <div class="meta">
             <h3><a href="Jonathan-Green-Case-Study.html">Owned a full DTC site rebuild <span class="arrow">→</span></a></h3>
-            <span class="year">2019–25</span>
           </div>
           <p>The online store was underperforming. I rebuilt it end to end and grew it from $10K to $2.5M in annual sales.</p>
-          <div class="tags"><span class="tag">E-Commerce</span><span class="tag">UX / Web</span><span class="tag">SEO</span><span class="tag">CRO</span></div>
+          <div class="tags"><span class="tag">E-Commerce</span><span class="tag">UX Design</span><span class="tag">User research</span><span class="tag">CRO</span></div>
           <a class="case-link" href="Jonathan-Green-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
         </article>
 
@@ -441,32 +429,29 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <a class="thumb" href="Amazon-Marketplace-Case-Study.html"><image-slot id="work2" src="images/jg-amazon-laptop-mobile-v2.png" fit="cover" placeholder="Amazon A+ content" radius="14"></image-slot></a>
           <div class="meta">
             <h3><a href="Amazon-Marketplace-Case-Study.html">Grew an Amazon channel ~43% a year <span class="arrow">→</span></a></h3>
-            <span class="year">2022–25</span>
           </div>
           <p>Outside sellers controlled the brand's messy Amazon listings. I took them over and grew the channel ~43% a year to $10.56M.</p>
-          <div class="tags"><span class="tag">Amazon</span><span class="tag">SEO</span><span class="tag">Merchandising</span></div>
+          <div class="tags"><span class="tag">Amazon Storefront</span><span class="tag">A+ Content</span><span class="tag">Merchandising</span></div>
           <a class="case-link" href="Amazon-Marketplace-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="proj reveal">
           <a class="thumb" href="Paid-Media-Case-Study.html"><image-slot id="work3" src="images/paid-media-meta-hero.png" fit="cover" placeholder="Paid media" radius="14"></image-slot></a>
           <div class="meta">
-            <h3><a href="Paid-Media-Case-Study.html">Scaled DTC with paid media &amp; content <span class="arrow">→</span></a></h3>
-            <span class="year">2019–25</span>
+            <h3><a href="Paid-Media-Case-Study.html">Scaled paid media spend efficiently <span class="arrow">→</span></a></h3>
           </div>
-          <p>A small brand fighting a giant for attention. I ran video and paid campaigns that helped grow DTC revenue from $10K to $2.5M.</p>
-          <div class="tags"><span class="tag">Paid Media</span><span class="tag">Meta</span><span class="tag">YouTube</span></div>
+          <p>A small brand fighting a giant for attention. I managed Meta, Google Ads, and Amazon Ads, scaling Amazon spend 10x to $2.1M in lifetime ad-attributed sales while growing DTC revenue from $10K to $2.5M.</p>
+          <div class="tags"><span class="tag">Paid Media</span><span class="tag">Meta</span><span class="tag">Google Ads</span><span class="tag">Amazon Ads</span></div>
           <a class="case-link" href="Paid-Media-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="proj reveal">
           <a class="thumb" href="SEO-Case-Study.html"><image-slot id="work4" src="images/seo-card-desktop-mobile-v2.png" fit="cover" placeholder="SEO" radius="14"></image-slot></a>
           <div class="meta">
-            <h3><a href="SEO-Case-Study.html">Grew organic search revenue 266% <span class="arrow">→</span></a></h3>
-            <span class="year">2019–25</span>
+            <h3><a href="SEO-Case-Study.html">Grew organic traffic 266% <span class="arrow">→</span></a></h3>
           </div>
           <p>I've grown organic traffic 266% and kept ranking through five Google Core Updates by building content architecture and on-page SEO that compounds, not backlinks that can vanish overnight.</p>
-          <div class="tags"><span class="tag">SEO</span><span class="tag">Content</span><span class="tag">Organic Search</span></div>
+          <div class="tags"><span class="tag">On Page SEO</span><span class="tag">Keyword Research</span><span class="tag">Technical SEO</span></div>
           <a class="case-link" href="SEO-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
         </article>
 
@@ -474,10 +459,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <a class="thumb" href="Affiliate-Marketing-Case-Study.html"><image-slot id="work5" src="images/affiliate-bobvila-placement.png" fit="cover" placeholder="Affiliate marketing" radius="14"></image-slot></a>
           <div class="meta">
             <h3><a href="Affiliate-Marketing-Case-Study.html">Built a $605K affiliate revenue channel <span class="arrow">→</span></a></h3>
-            <span class="year">2022–24</span>
           </div>
           <p>A concentrated, unprofitable affiliate program. I rebuilt the partner network and pricing, growing revenue 54% to $605K cumulative.</p>
-          <div class="tags"><span class="tag">Affiliate</span><span class="tag">Partnerships</span><span class="tag">Performance Marketing</span></div>
+          <div class="tags"><span class="tag">Affiliate</span><span class="tag">Partnerships</span><span class="tag">Data Analysis</span></div>
           <a class="case-link" href="Affiliate-Marketing-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
         </article>
 
@@ -485,10 +469,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <a class="thumb" href="SEO-Migration-Case-Study.html"><image-slot id="work6" src="images/seo-migration-gemini-hero.png" fit="cover" placeholder="SEO Migration" radius="14"></image-slot></a>
           <div class="meta">
             <h3><a href="SEO-Migration-Case-Study.html">Migrated thousands of URLs, no ranking loss <span class="arrow">→</span></a></h3>
-            <span class="year">2024–25</span>
           </div>
           <p>A full site redesign put years of domain authority at risk. I re-architected the URL structure alongside it and rebounded within two weeks.</p>
-          <div class="tags"><span class="tag">SEO</span><span class="tag">Technical SEO</span><span class="tag">Migration</span></div>
+          <div class="tags"><span class="tag">On Page SEO</span><span class="tag">Technical SEO</span><span class="tag">URL Migration</span></div>
           <a class="case-link" href="SEO-Migration-Case-Study.html">Read case study <span aria-hidden="true">→</span></a>
         </article>
 
@@ -511,7 +494,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <p>Earlier, as an <strong>Associate Product Manager at Rocket Lawyer</strong>, I led a 15-person team building an e-commerce ecosystem of catalog, subscriptions, billing, and internal tools behind a multi-million-dollar subscription business. Today I'm <strong>Fractional Marketing Director of MDH Beauty</strong>.</p>
           <p>Detail-oriented project management and an eye for design shape everything I ship, from merchandising and conversion to retention. Based in Austin, Texas, I recharge by cooking, traveling, and practicing yoga, and I bring that same curiosity and care to every team I join.</p>
           <div class="toolbar">
-            <span class="tag">E-Commerce &amp; Product</span><span class="tag">Paid Media</span><span class="tag">SEO</span><span class="tag">Email &amp; Lifecycle</span><span class="tag">Content Strategy</span><span class="tag">Team Leadership</span>
+            <span class="tag">E-Commerce</span><span class="tag">Leadership</span><span class="tag">Product Management</span><span class="tag">Paid Media</span><span class="tag">SEO / GEO</span><span class="tag">Email Marketing</span><span class="tag">Content Strategy</span><span class="tag">Affiliate Marketing</span>
           </div>
         </div>
       </div>
@@ -522,7 +505,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
   <section class="quote" data-screen-label="Testimonials">
     <div class="wrap">
       <div class="sec-head reveal">
-        <h2>What people say</h2>
+        <h2>What People Say</h2>
         <span class="num">[ Recommendations ]</span>
       </div>
       <div class="recs reveal">
@@ -547,50 +530,51 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
         <h2>Experience</h2>
         <span class="num">[ Career ]</span>
       </div>
-      <div class="exp-groups">
-        <div class="exp-group reveal">
-          <div class="exp-co">
-            <span class="exp-logo"><img src="images/logo-mdh-sq.png" alt="MDH Beauty logo" /></span>
-            <div><div class="co-name">MDH Beauty</div><div class="co-period">2025 – Now</div></div>
+      <div class="exp-cards">
+        <div class="exp-card">
+          <span class="exp-card-logo"><img src="images/logo-mdh-sq.png" alt="MDH Beauty logo" /></span>
+          <div>
+            <h3 class="exp-card-role">Fractional Marketing Director</h3>
+            <div class="exp-card-co">MDH Beauty</div>
+            <p class="exp-card-sub">Led MDH Beauty's SEO and digital launch from zero, standing up keyword strategy, GA4 tracking, and owned-channel infrastructure.</p>
           </div>
-          <div class="exp-roles">
-            <div class="exp-role">
-              <div class="role-top"><span class="role-title">Fractional Marketing Director</span><span class="role-yr">2025 – Now</span></div>
-              <p class="role-sub" style="width: 697px; height: 29px">Led MDH Beauty's SEO and digital launch from zero — keyword strategy, GA4 e-commerce tracking, and the brand, content, and owned-channel infrastructure built to drive customer acquisition.</p>
-            </div>
-          </div>
+          <span class="exp-card-yr">2025 – Now</span>
         </div>
-        <div class="exp-group reveal">
-          <div class="exp-co">
-            <span class="exp-logo"><img src="images/logo-jg-sq.png" alt="Jonathan Green logo" /></span>
-            <div><div class="co-name">Jonathan Green</div><div class="co-period">2019 – 2025</div></div>
+        <div class="exp-card">
+          <span class="exp-card-logo"><img src="images/logo-jg-sq.png" alt="Jonathan Green logo" /></span>
+          <div>
+            <h3 class="exp-card-role">Director of Digital Marketing &amp; E-Commerce</h3>
+            <div class="exp-card-co">Jonathan Green</div>
+            <p class="exp-card-sub">Owned DTC, Amazon, and six agency partners, promoted from Manager. Led the site rebuild and its SEO migration side by side.</p>
           </div>
-          <div class="exp-roles">
-            <div class="exp-role">
-              <div class="role-top"><span class="role-title">Director of Digital Marketing &amp; E-Commerce</span><span class="role-yr">2022 – 2025</span></div>
-              <p class="role-sub" style="width: 698px; height: 45px">Owned DTC and Amazon and six agency partners, promoted from Manager. Grew the storefront from $10K to $2.5M.</p>
-            </div>
-            <div class="exp-role">
-              <div class="role-top"><span class="role-title">Digital Marketing &amp; Website Manager</span><span class="role-yr">2019 – 2022</span></div>
-              <p class="role-sub" style="width: 647px; height: 42px">Built the DTC site from the ground up on WooCommerce, wrote and produced the brand's first paid media and video creative, and stood up email and SEO foundations from scratch.</p>
-            </div>
-          </div>
+          <span class="exp-card-yr">2022 – 2025</span>
         </div>
-        <div class="exp-group reveal">
-          <div class="exp-co">
-            <span class="exp-logo"><img src="images/logo-rl-sq.png" alt="Rocket Lawyer logo" /></span>
-            <div><div class="co-name">Rocket Lawyer</div><div class="co-period">2013 – 2015</div></div>
+        <div class="exp-card">
+          <span class="exp-card-logo"><img src="images/logo-jg-sq.png" alt="Jonathan Green logo" /></span>
+          <div>
+            <h3 class="exp-card-role">Digital Marketing &amp; Website Manager</h3>
+            <div class="exp-card-co">Jonathan Green</div>
+            <p class="exp-card-sub">Ran email, paid ads, social, and SEO from the ground up, building the marketing engine behind the DTC storefront's early growth.</p>
           </div>
-          <div class="exp-roles">
-            <div class="exp-role">
-              <div class="role-top"><span class="role-title">Associate Product Manager, E-Commerce &amp; Internal Tools</span><span class="role-yr">2014 – 2015</span></div>
-              <p class="role-sub">Led a 15-person team building a subscription-commerce ecosystem.</p>
-            </div>
-            <div class="exp-role">
-              <div class="role-top"><span class="role-title">Junior Product Manager &amp; Incorporation Specialist</span><span class="role-yr">2013 – 2014</span></div>
-              <p class="role-sub">Built CRM and e-commerce tooling for sales and service workflows.</p>
-            </div>
+          <span class="exp-card-yr">2019 – 2022</span>
+        </div>
+        <div class="exp-card">
+          <span class="exp-card-logo"><img src="images/logo-rl-sq.png" alt="Rocket Lawyer logo" /></span>
+          <div>
+            <h3 class="exp-card-role">Associate Product Manager, E-Commerce &amp; Internal Tools</h3>
+            <div class="exp-card-co">Rocket Lawyer</div>
+            <p class="exp-card-sub">Led 10 engineers, 3 designers, and 2 QA specialists to launch a redesigned catalog, subscriptions, and billing ecosystem.</p>
           </div>
+          <span class="exp-card-yr">2014 – 2015</span>
+        </div>
+        <div class="exp-card">
+          <span class="exp-card-logo"><img src="images/logo-rl-sq.png" alt="Rocket Lawyer logo" /></span>
+          <div>
+            <h3 class="exp-card-role">Junior Product Manager &amp; Incorporation Specialist</h3>
+            <div class="exp-card-co">Rocket Lawyer</div>
+            <p class="exp-card-sub">Supported internal CRM and e-commerce tooling while advising customers on business formation and compliance.</p>
+          </div>
+          <span class="exp-card-yr">2013 – 2014</span>
         </div>
       </div>
     </div>
@@ -675,7 +659,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
     const data=[
       {av:'LM',nm:'Logan M.',rl:'Senior Director of SEO, Intero Digital · Agency partner',lead:'It is rare to come across a director with as much knowledge of the entire digital marketing landscape as Kendall.',q:'It is rare to come across a director with as much knowledge of the entire digital marketing landscape as Kendall. Her follow-up, follow-through, organization, and diligence were second-to-none. She not only gets stuff done with results, she motivates others to do the same.'},
       {av:'BW',nm:'Brianna W.',rl:'Digital Marketing Associate, Jonathan Green · Reported to Kendall',lead:'Kendall led with kindness, patience, and a genuine commitment to helping me grow.',q:'Kendall led with kindness, patience, and a genuine commitment to helping me grow. No matter how busy she was, she was always available. Her direction was thoughtful, clear, and steady, and she made every challenge feel manageable.'},
-      {av:'SM',nm:'Stephanie M.',rl:'Product Manager, Rocket Lawyer',lead:'Kendall is a champion for the users of internal tools, and it shows in her work.',q:'Kendall is a champion for the users of internal tools and it shows in her work. She understands these users and their day to day well, and is passionate about building products that improve their lives.'}
+      {av:'SM',nm:'Stephanie M.',rl:'Product Manager, Rocket Lawyer · My manager',lead:'Kendall is a champion for the users of internal tools, and it shows in her work.',q:'Kendall is a champion for the users of internal tools and it shows in her work. She understands these users and their day to day well, and is passionate about building products that improve their lives.'}
     ];
     const DUR=5500;
     const feat=document.querySelector('.rec-feat');
