@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Enterprise SEO Case Study · Jonathan Green · Kendall Casey-Green</title>
-<meta name="description" content="How Kendall Casey-Green scaled JonathanGreen.com's organic growth 266% through content architecture and on-page SEO — surviving five major Google Core Updates without relying on backlinks." />
+<meta name="description" content="How Kendall Casey-Green scaled JonathanGreen.com's organic growth 266% through content architecture and on-page SEO, surviving five major Google Core Updates without relying on backlinks." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -18,7 +18,7 @@
   --r:16px;--container:1160px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;}
-html{scroll-behavior:smooth;--eyebrow-scale:1;}
+html{scroll-behavior:smooth;--eyebrow-scale:1.5;}
 html[data-eyebrow-lg]{--eyebrow-scale:2;}
 body{background:var(--ink);color:var(--body);font-family:var(--ff-b);font-size:17px;line-height:1.6;overflow-x:hidden;}
 img{display:block;max-width:100%;}
@@ -39,9 +39,9 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 .brand{font-family:var(--ff-d);font-weight:600;font-size:15px;color:#fff;display:flex;align-items:center;gap:10px;}
 .brand .ar{opacity:.7;transition:transform .2s ease;}
 .brand:hover .ar{transform:translateX(-3px);}
-.navlinks{display:flex;gap:28px;font-size:13.5px;color:var(--muted);}
-.navlinks a{transition:color .2s ease;}
-.navlinks a:hover{color:#fff;}
+.navlinks{display:flex;gap:28px;font-size:13.5px;color:var(--muted);margin-left:auto;margin-right:18px;}
+.navlinks a{transition:color .2s ease;text-decoration:none;text-underline-offset:4px;}
+.navlinks a:hover{color:#fff;text-decoration:underline;}
 .navcta{font-family:var(--ff-b);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:100px;background:var(--gold);color:#171006;transition:background .2s ease,transform .2s ease;white-space:nowrap;flex:none;}
 .navcta:hover{background:var(--gold-2);transform:translateY(-1px);}
 @media(max-width:760px){.navlinks{display:none;}}
@@ -77,6 +77,7 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 .ch-card .tag{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--red);display:flex;align-items:center;gap:8px;}
 .ch-card .tag::before{content:"⚠";font-size:12px;}
 .ch-move{display:flex;align-items:baseline;gap:14px;margin:18px 0 10px;flex-wrap:wrap;}
+.ch-num-wrap{display:flex;align-items:baseline;gap:14px;white-space:nowrap;}
 .ch-move .from{font-family:var(--ff-d);font-size:26px;font-weight:600;color:var(--muted);}
 .ch-move .ar{color:var(--red);}
 .ch-move .to{font-family:var(--ff-d);font-size:clamp(30px,3.4vw,42px);font-weight:700;letter-spacing:-.03em;color:#fff;}
@@ -98,7 +99,7 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 .strat-card li{font-size:14px;color:var(--body-dark);padding-left:16px;position:relative;line-height:1.4;}
 .strat-card li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:var(--gold);}
 @media(max-width:900px){.strat-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.strat-grid{grid-template-columns:1fr;}}
+@media(max-width:560px){.strat-grid{grid-template-columns:1fr;}.strat-card{max-width:380px;margin:0 auto;text-align:center;}.strat-ic{margin:0 auto;}.strat-card ul{display:inline-block;text-align:left;}}
 
 /* ---- inflection ---- */
 .inflect{background:var(--ink-2);border-top:1px solid var(--line-dark);}
@@ -170,6 +171,7 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 /* ---- keyword wins ---- */
 .kw{background:var(--ink-2);border-top:1px solid var(--line-dark);}
 .kw-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:52px;}
+@media(max-width:700px){.kw-grid{grid-template-columns:1fr;}}
 .kw-card{background:var(--ink-3);border:1px solid var(--line-dark);border-radius:var(--r);padding:28px;}
 .kw-card .term{font-family:var(--ff-d);font-weight:600;font-size:19px;color:#fff;letter-spacing:-.01em;}
 .kw-rank{display:flex;align-items:baseline;gap:10px;margin-top:16px;}
@@ -217,11 +219,9 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink);}
 .foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--ff-m);font-size:12px;color:var(--muted);max-width:var(--container);margin:0 auto;padding:0 32px;}
 
-.eyebrow-toggle{position:fixed;bottom:22px;right:22px;z-index:95;font-family:var(--ff-m);font-size:11.5px;letter-spacing:.04em;padding:10px 16px;border-radius:100px;background:var(--ink-3);border:1px solid var(--line-dark);color:var(--on-dark-mut,#aab2c5);cursor:pointer;transition:border-color .2s ease,color .2s ease;}
-.eyebrow-toggle:hover{border-color:var(--gold);color:#fff;}
-.eyebrow-toggle.on{color:var(--gold-2);border-color:var(--gold);}
 @media(max-width:900px){section{padding:80px 0;}.stat-row{margin-top:52px;}}
-</style>
+</style>solid var(--line-dark);color:var(--on-dark-mut,#aab2c5);cursor:pointer;transition:border-color .2s ease,color .2s ease;}
+
 </head>
 <body>
 
@@ -243,9 +243,9 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
 
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow reveal in">Enterprise SEO Case Study</div>
+      <div class="eyebrow reveal in">SEO CASE STUDY</div>
       <h1 class="reveal in">I use on-page and technical SEO to grow organic traffic.</h1>
-      <p class="sub reveal in">Through content strategy, technical SEO, and on-page optimization — sustained growth that survived Google's toughest algorithm years.</p>
+      <p class="sub reveal in">Through content strategy, technical SEO, and on-page optimization, sustained growth that survived Google's toughest algorithm years.</p>
       <div class="hero-ctas reveal in">
         <a class="btn" href="#results">View Results</a>
         <a class="btn ghost" href="#challenge">See the Challenge</a>
@@ -255,12 +255,12 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
         <div class="stat-c"><div class="n"><span class="arrow">↑</span>287%</div><div class="l">Page One Rankings</div></div>
         <div class="stat-c"><div class="n"><span class="arrow">↑</span>364%</div><div class="l">Top 3 Rankings</div></div>
         <div class="stat-c"><div class="n">5+</div><div class="l">Google Core Updates Survived</div></div>
-        <div class="stat-c"><div class="n">40 → 39</div><div class="l">Authority Score — growth came without backlink dependence</div></div>
+        <div class="stat-c"><div class="n">40 → 39</div><div class="l">Authority Score, growth came without backlink dependence</div></div>
       </div>
       <div class="proof reveal in">
         <img src="images/seo-card-desktop-mobile-v2.png" alt="Jonathan Green ranking in Google search results for natural lawn fertilizer, shown on desktop and mobile with AI Overview" />
       </div>
-      <div class="proof-cap">Jonathan Green ranking organically for natural lawn fertilizer — desktop and mobile</div>
+      <div class="proof-cap">Jonathan Green ranking organically for natural lawn fertilizer, desktop and mobile</div>
     </div>
   </section>
 
@@ -273,12 +273,12 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
       <div class="ch-nums">
         <div class="ch-card reveal">
           <div class="tag">November 2021 Core Update</div>
-          <div class="ch-move"><span class="from">81,944</span><span class="ar">→</span><span class="to">57,665</span><span class="pct">−29.6%</span></div>
+          <div class="ch-move"><span class="ch-num-wrap"><span class="from">81,944</span><span class="ar">→</span><span class="to">57,665</span></span><span class="pct">−29.6%</span></div>
           <div class="cap">Monthly organic traffic</div>
         </div>
         <div class="ch-card reveal">
           <div class="tag">2022 Core Update</div>
-          <div class="ch-move"><span class="from">91,629</span><span class="ar">→</span><span class="to">52,423</span><span class="pct">−42.8%</span></div>
+          <div class="ch-move"><span class="ch-num-wrap"><span class="from">91,629</span><span class="ar">→</span><span class="to">52,423</span></span><span class="pct">−42.8%</span></div>
           <div class="cap">Monthly organic traffic</div>
         </div>
       </div>
@@ -346,7 +346,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
     <div class="wrap">
       <div class="eyebrow reveal">The Inflection Point</div>
       <h2 class="h reveal">Keyword footprint nearly doubled in one quarter.</h2>
-      <p class="lede reveal">March 2023 to June 2023 — from 30,362 to 60,392 ranking keywords.</p>
+      <p class="lede reveal">March 2023 to June 2023: from 30,362 to 60,392 ranking keywords.</p>
       <div class="infl-chart">
         <div class="infl-bar-wrap reveal">
           <div class="val">30,362</div>
@@ -397,7 +397,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
       <div class="feat-card reveal">
         <div>
           <span class="feat-badge">Recovered Above Pre-Update Levels</span>
-          <h3>March 2024: the update that could have sunk five years of work — I made it the strongest month yet.</h3>
+          <h3>March 2024: the update that could have sunk five years of work. I made it the strongest month yet.</h3>
         </div>
         <div class="feat-nums">
           <div class="m"><div class="n">51,254</div><div class="l">MARCH LOW</div></div>
@@ -453,7 +453,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
       </div>
       <div class="insight-box reveal" style="margin-top:56px;">
         <div class="lab">Insight</div>
-        <p>Traffic nearly quadrupled while Authority Score stayed flat. I did that with content architecture and on-page SEO, not backlink acquisition — proof the growth was earned, not bought.</p>
+        <p>Traffic nearly quadrupled while Authority Score stayed flat. I did that with content architecture and on-page SEO, not backlink acquisition, proof the growth was earned, not bought.</p>
       </div>
     </div>
   </section>
@@ -467,7 +467,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
           <div class="lab">Paid Search Equivalent</div>
           <div class="imp-move"><span class="from">2019 · $261,962</span><span class="ar">→</span><span class="to">2025 · $491,624</span></div>
           <div class="imp-bar"><i style="width:88%"></i></div>
-          <div class="foot" style="margin-top:14px;color:var(--body-dark);font-size:14px;">+87.6% — what this traffic would have cost to buy in paid search</div>
+          <div class="foot" style="margin-top:14px;color:var(--body-dark);font-size:14px;">+87.6%: what this traffic would have cost to buy in paid search</div>
           <p style="font-size:13px;color:var(--muted);margin-top:16px;line-height:1.55;">I calculated this by taking each year's organic clicks per keyword and multiplying by that keyword's average Google Ads CPC, then summing across the ranking keyword set — the standard way to price organic traffic against what it would cost in paid media.</p>
         </div>
       </div>
@@ -534,7 +534,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
         </div>
       </div>
       <div class="thesis reveal">
-        <p>The growth engine was content strategy, site architecture, internal linking, and on-page SEO — not link building.</p>
+        <p>The growth engine was content strategy, site architecture, internal linking, and on-page SEO, not link building.</p>
       </div>
     </div>
   </section>
@@ -545,7 +545,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
       <h2 class="reveal">Enterprise SEO that withstood Google's toughest years.</h2>
       <p class="body reveal">From 2019 through 2025, JonathanGreen.com successfully navigated more than five major Google Core and Helpful Content Updates while dramatically expanding its organic footprint. Rather than relying on aggressive backlink campaigns, the strategy centered on scalable content architecture, technical optimization, internal linking, and high-quality on-page SEO.</p>
       <p class="body reveal">The result was sustained, defensible organic growth that continued to recover and outperform after every major algorithm change.</p>
-      <p class="bold reveal">If you're hiring someone to build sustainable organic growth — not temporary SEO wins — this case study demonstrates exactly that capability.</p>
+      <p class="bold reveal">If you're hiring someone to build sustainable organic growth, not temporary SEO wins, this case study demonstrates exactly that capability.</p>
       <div class="actions reveal">
         <a class="btn" href="https://www.jonathangreen.com/" target="_blank" rel="noopener">Visit live site ↗</a>
         <a class="btn ghost" href="Kendall%20Portfolio.html#work">Back to portfolio</a>
@@ -561,8 +561,6 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
     <span>Jonathan Green · Enterprise SEO Case Study</span>
   </div>
 </footer>
-
-<button class="eyebrow-toggle" id="eyebrowToggle" type="button">Aa Label size</button>
 
 <script>
 (function(){
@@ -588,19 +586,6 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
   },{threshold:.4});
   bars.forEach(function(b){ barIO.observe(b); });
 
-  var KEY='kw-eyebrow-lg';
-  var btn=document.getElementById('eyebrowToggle');
-  function apply(on){
-    document.documentElement.toggleAttribute('data-eyebrow-lg',on);
-    btn.classList.toggle('on',on);
-    btn.textContent=on?'Aa Label size: 2×':'Aa Label size';
-  }
-  apply(localStorage.getItem(KEY)==='1');
-  btn.addEventListener('click',function(){
-    var on=!document.documentElement.hasAttribute('data-eyebrow-lg');
-    localStorage.setItem(KEY,on?'1':'0');
-    apply(on);
-  });
 })();
 </script>
 

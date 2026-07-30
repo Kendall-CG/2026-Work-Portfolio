@@ -341,7 +341,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
       </nav>
-      <a href="mailto:kendallgreen988@gmail.com?subject=Let%27s%20get%20in%20touch" class="btn">Get in touch</a>
+      <a href="#" data-mail data-subject="Let's get in touch" class="btn">Get in touch</a>
       <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -351,7 +351,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
   <a href="#work">Work</a>
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
-  <a href="mailto:kendallgreen988@gmail.com?subject=Let%27s%20get%20in%20touch" class="btn">Get in touch</a>
+  <a href="#" data-mail data-subject="Let's get in touch" class="btn">Get in touch</a>
 </div>
 
 <main id="top">
@@ -584,9 +584,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
   <section id="contact" class="contact" data-screen-label="Contact">
     <div class="wrap">
       <div class="eyebrow">Open to new opportunities · 2026</div>
-      <h2>Let's get to know <a href="mailto:kendallgreen988@gmail.com">each other.</a></h2>
+      <h2>Let's get to know <a href="#" data-mail>each other.</a></h2>
       <div class="contact-actions">
-        <a href="mailto:kendallgreen988@gmail.com" class="btn">Email Kendall</a>
+        <a href="#" data-mail class="btn">Email Kendall</a>
       </div>
     </div>
   </section>
@@ -599,7 +599,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
     <div class="socials">
       <a href="https://www.linkedin.com/in/kendallcasey-green/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="assets/Kendall-Casey-Green-Resume.pdf" target="_blank" rel="noopener">Resume</a>
-      <a href="mailto:kendallgreen988@gmail.com">Email</a>
+      <a href="#" data-mail>Email</a>
     </div>
   </div>
 </footer>
@@ -610,6 +610,15 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
   const nav=document.getElementById('nav');
   const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>40);};
   onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // obfuscated email: assembled at runtime so scrapers can't read it from source
+  (function(){
+    var u='kendallgreen988', d='gmail.com';
+    document.querySelectorAll('[data-mail]').forEach(function(a){
+      var subj=a.getAttribute('data-subject');
+      a.href='mailto:'+u+'@'+d+(subj?('?subject='+encodeURIComponent(subj)):'');
+    });
+  })();
 
   // mobile menu
   const burger=document.getElementById('burger');

@@ -17,7 +17,7 @@
   --r:16px;--container:1160px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;}
-html{scroll-behavior:smooth;--eyebrow-scale:1;}
+html{scroll-behavior:smooth;--eyebrow-scale:1.5;}
 html[data-eyebrow-lg]{--eyebrow-scale:2;}
 body{background:var(--ink);color:var(--body-dark);font-family:var(--ff-b);font-size:17px;line-height:1.6;overflow-x:hidden;}
 img{display:block;max-width:100%;}
@@ -37,8 +37,9 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 .brand{font-family:var(--ff-d);font-weight:600;font-size:15px;color:#fff;display:flex;align-items:center;gap:10px;flex:none;}
 .brand .ar{opacity:.7;transition:transform .2s ease;}
 .brand:hover .ar{transform:translateX(-3px);}
-.navlinks{display:flex;gap:26px;font-size:13.5px;color:var(--muted);}
-.navlinks a:hover{color:#fff;}
+.navlinks{display:flex;gap:26px;font-size:13.5px;color:var(--muted);margin-left:auto;margin-right:18px;}
+.navlinks a{text-decoration:none;text-underline-offset:4px;transition:color .2s ease;}
+.navlinks a:hover{color:#fff;text-decoration:underline;}
 .navcta{font-family:var(--ff-b);font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:100px;background:var(--gold);color:#171006;white-space:nowrap;flex:none;transition:background .2s ease,transform .2s ease;}
 .navcta:hover{background:var(--gold-2);transform:translateY(-1px);}
 @media(max-width:760px){.navlinks{display:none;}}
@@ -167,9 +168,6 @@ h2.h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,48px);lett
 
 footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink);}
 .foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--ff-m);font-size:12px;color:var(--muted);max-width:var(--container);margin:0 auto;padding:0 32px;}
-.eyebrow-toggle{position:fixed;bottom:22px;right:22px;z-index:95;font-family:var(--ff-m);font-size:11.5px;letter-spacing:.04em;padding:10px 16px;border-radius:100px;background:var(--ink-3);border:1px solid var(--line-dark);color:var(--body-dark);cursor:pointer;transition:border-color .2s ease,color .2s ease;}
-.eyebrow-toggle:hover{border-color:var(--gold);color:#fff;}
-.eyebrow-toggle.on{color:var(--gold-2);border-color:var(--gold);}
 @media(max-width:900px){section{padding:80px 0;}}
 </style>
 </head>
@@ -195,7 +193,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
     <div class="wrap">
       <div class="eyebrow reveal in">Affiliate Marketing Case Study</div>
       <h1 class="reveal in">Jonathan Green's Affiliate Program: from 0 to $605K in revenue.</h1>
-      <p class="sub reveal in">Through smarter partner strategy and performance optimization — growth funded by better economics, not bigger budgets.</p>
+      <p class="sub reveal in">Through smarter partner strategy and performance optimization, growth funded by better economics, not bigger budgets.</p>
       <div class="hero-ctas reveal in">
         <a class="btn" href="#wins">View Case Study</a>
         <a class="btn ghost" href="#impact">See Results</a>
@@ -217,7 +215,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
       <div class="exec-cols">
         <div class="reveal">
           <p>Between January 2022 and December 2024, I transformed Jonathan Green's affiliate marketing program from a small, concentrated channel into a scalable acquisition engine generating more than $605K in attributed revenue.</p>
-          <p>Instead of simply increasing commission spend, I improved partner quality, pricing strategy, coupon governance, and operational efficiency — allowing the channel to grow while becoming more profitable.</p>
+          <p>Instead of simply increasing commission spend, I improved partner quality, pricing strategy, coupon governance, and operational efficiency, allowing the channel to grow while becoming more profitable.</p>
         </div>
         <div class="exec-cards reveal">
           <div class="exec-card"><div class="lab">Annual revenue growth</div><div class="v">+$82K</div></div>
@@ -231,7 +229,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
   <section class="challenge" id="challenge">
     <div class="wrap">
       <div class="eyebrow reveal">The Challenge</div>
-      <h2 class="h reveal">January 2022 — a channel dominated by a small number of coupon sites.</h2>
+      <h2 class="h reveal">January 2022: a channel dominated by a small number of coupon sites.</h2>
       <div class="ch-grid">
         <div class="ch-card reveal"><div class="tag">Revenue</div><div class="n">$151,278</div><div class="l">Annually</div></div>
         <div class="ch-card reveal"><div class="tag">Network</div><div class="n">22 / 7</div><div class="l">Total affiliates / active partners</div></div>
@@ -239,7 +237,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
         <div class="ch-card reveal"><div class="tag">ROI</div><div class="n">18%</div><div class="l">At program launch</div></div>
       </div>
       <div class="callout reveal">
-        <p>The affiliate program relied heavily on a very small number of partners, creating significant concentration risk. Coupon sites dominated the mix, limiting profitability and average order value. Growth would require more than simply increasing commissions — it demanded rebuilding the channel from the ground up.</p>
+        <p>The affiliate program relied heavily on a very small number of partners, creating significant concentration risk. Coupon sites dominated the mix, limiting profitability and average order value. Growth would require more than simply increasing commissions. It demanded rebuilding the channel from the ground up.</p>
       </div>
     </div>
   </section>
@@ -253,12 +251,12 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
         <div class="strat-card reveal"><div class="strat-ic">02</div><h3>Commission Optimization</h3><p>Redesigned tiered commission structures around incrementality instead of rewarding every transaction equally.</p></div>
         <div class="strat-card reveal"><div class="strat-ic">03</div><h3>Partner Mix Optimization</h3><p>Shifted investment away from coupon interception toward high-value gardening publishers and content creators.</p></div>
         <div class="strat-card reveal"><div class="strat-ic">04</div><h3>Coupon Governance</h3><p>Consolidated affiliate coupon codes into controlled program codes to eliminate leakage and measure profitability accurately.</p></div>
-        <div class="strat-card reveal"><div class="strat-ic">05</div><h3>Performance Analytics</h3><p>Measured performance using fully-loaded CAC, ROAS, commission efficiency, and revenue contribution — not vanity metrics.</p></div>
+        <div class="strat-card reveal"><div class="strat-ic">05</div><h3>Performance Analytics</h3><p>Measured performance using fully-loaded CAC, ROAS, commission efficiency, and revenue contribution, not vanity metrics.</p></div>
       </div>
       <div class="proof reveal">
         <img src="images/affiliate-bobvila-placement.png" alt="A Jonathan Green Black Beauty Ultra Grass Seed affiliate placement inside a Bob Vila best grass seed roundup" />
       </div>
-      <div class="proof-cap">A partner placement in action — Jonathan Green featured in a Bob Vila product roundup</div>
+      <div class="proof-cap">A partner placement in action: Jonathan Green featured in a Bob Vila product roundup</div>
     </div>
   </section>
 
@@ -280,7 +278,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
             <div class="m"><div class="move"><span class="from">691%</span><span class="ar">→</span><span class="to">742%</span></div><div class="l">ROI</div></div>
           </div>
         </div>
-        <div class="win-banner"><span class="ic">✓</span><p>I decoupled growth from spending. Most affiliate programs grow by paying affiliates more — I grew volume while keeping costs nearly flat. This demonstrates pricing strategy, not budget growth.</p></div>
+        <div class="win-banner"><span class="ic">✓</span><p>I decoupled growth from spending. Most affiliate programs grow by paying affiliates more. I grew volume while keeping costs nearly flat. This demonstrates pricing strategy, not budget growth.</p></div>
       </div>
 
       <div class="win-card reveal">
@@ -296,7 +294,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
             <div class="m"><div class="move"><span class="from">9,689</span><span class="ar">→</span><span class="to">38,931</span></div><div class="l">Clicks · +302%</div></div>
           </div>
         </div>
-        <div class="win-banner"><span class="ic">✓</span><p>Reduced concentration risk while building a scalable acquisition engine — this shows marketplace-building experience, not just channel management.</p></div>
+        <div class="win-banner"><span class="ic">✓</span><p>Reduced concentration risk while building a scalable acquisition engine. This shows marketplace-building experience, not just channel management.</p></div>
       </div>
 
       <div class="win-card reveal">
@@ -314,7 +312,7 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
             <div class="m"><div class="move"><span class="to">−13.9%</span></div><div class="l">Coupon leakage</div></div>
           </div>
         </div>
-        <div class="win-banner"><span class="ic">✓</span><p>Growth funded itself through efficiency — not larger budgets.</p></div>
+        <div class="win-banner"><span class="ic">✓</span><p>Growth funded itself through efficiency, not larger budgets.</p></div>
       </div>
 
       <div class="win-card reveal">
@@ -433,9 +431,9 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
     <div class="wrap">
       <div class="eyebrow reveal" style="justify-content:center;">Why This Experience Matters</div>
       <h2 class="reveal">More than affiliate management: a scalable performance engine.</h2>
-      <p class="body reveal">The Jonathan Green affiliate program demonstrates more than successful affiliate management — it shows the ability to build a scalable performance marketing engine. By recruiting higher-value partners, redesigning commission incentives, improving channel governance, and optimizing profitability, the program generated more than $604K in attributed revenue while reducing acquisition costs and improving return on every marketing dollar.</p>
-      <p class="body reveal">The most important outcome wasn't simply higher revenue — it was creating a sustainable, measurable growth channel that became increasingly efficient as it scaled.</p>
-      <p class="bold reveal">I don't just grow affiliate programs — I build profitable partner ecosystems that scale.</p>
+      <p class="body reveal">The Jonathan Green affiliate program demonstrates more than successful affiliate management. It shows the ability to build a scalable performance marketing engine. By recruiting higher-value partners, redesigning commission incentives, improving channel governance, and optimizing profitability, the program generated more than $604K in attributed revenue while reducing acquisition costs and improving return on every marketing dollar.</p>
+      <p class="body reveal">The most important outcome wasn't simply higher revenue. It was creating a sustainable, measurable growth channel that became increasingly efficient as it scaled.</p>
+      <p class="bold reveal">I don't just grow affiliate programs. I build profitable partner ecosystems that scale.</p>
       <div class="actions reveal">
         <a class="btn" href="Kendall%20Portfolio.html#work">See more work ↗</a>
         <a class="btn ghost" href="assets/Kendall-Casey-Green-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
@@ -452,8 +450,6 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
   </div>
 </footer>
 
-<button class="eyebrow-toggle" id="eyebrowToggle" type="button">Aa Label size</button>
-
 <script>
 (function(){
   var bar=document.getElementById('progress');
@@ -468,20 +464,6 @@ footer{border-top:1px solid var(--line-dark);padding:36px 0;background:var(--ink
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:.12});
   revealEls.forEach(function(el){ io.observe(el); });
-
-  var KEY='kw-eyebrow-lg';
-  var btn=document.getElementById('eyebrowToggle');
-  function apply(on){
-    document.documentElement.toggleAttribute('data-eyebrow-lg',on);
-    btn.classList.toggle('on',on);
-    btn.textContent=on?'Aa Label size: 2×':'Aa Label size';
-  }
-  apply(localStorage.getItem(KEY)==='1');
-  btn.addEventListener('click',function(){
-    var on=!document.documentElement.hasAttribute('data-eyebrow-lg');
-    localStorage.setItem(KEY,on?'1':'0');
-    apply(on);
-  });
 })();
 </script>
 
