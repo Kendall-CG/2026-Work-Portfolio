@@ -188,6 +188,13 @@ section{padding:104px 0;}
 .exp-card-role{font-family:var(--ff-display);font-weight:600;font-size:18px;letter-spacing:-0.012em;margin:0 0 2px;color:#d49a3c;}
 .exp-card-co{font-size:14px;font-weight:500;color:#aab2c5;margin-bottom:7px;}
 .exp-card-sub{margin:0;color:#cfd5e0;font-size:14px;line-height:1.5;max-width:58ch;}
+.exp-card-logo.mono{background:#d49a3c;color:#17243d;font-family:var(--ff-display);font-weight:700;font-size:17px;}
+.exp-subs{display:flex;flex-direction:column;gap:18px;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);}
+.exp-sub{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;}
+.exp-sub img{width:34px;height:34px;border-radius:8px;background:#fff;object-fit:contain;padding:3px;}
+.exp-sub h4{font-family:var(--ff-display);font-weight:600;font-size:16px;letter-spacing:-0.01em;color:#fff;margin:0;}
+.exp-sub .m{font-size:13px;color:#aab2c5;margin:3px 0 7px;}
+.exp-sub ul{margin:0;padding-left:18px;color:#cfd5e0;font-size:14px;line-height:1.5;display:flex;flex-direction:column;gap:5px;max-width:62ch;}
 .exp-card-yr{font-family:var(--ff-mono);font-size:11.5px;color:#9aa6bd;white-space:nowrap;}
 /* experience — navy band */
 #experience{background:var(--ink);}
@@ -572,7 +579,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <div class="win reveal">
             <div class="ch">Amazon Seller Central</div>
             <div class="n"><span class="yoy">▲</span><em>$5.4M → $13.3M</em></div>
-            <div class="t">Took listings back from resellers through Brand Registry, rebuilt every product page, and scaled ad spend 10x.</div>
+            <div class="t">Took listings back from resellers through Brand Registry, rebuilt every product page, and tripled repeat orders.</div>
           </div>
         </div>
       </div>
@@ -612,7 +619,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
             <div class="fc-stats">
               <div><div class="fc-n">$13.3M</div><div class="fc-l">annual revenue, up from $5.4M</div></div>
               <div><div class="fc-n">$36.5M</div><div class="fc-l">cumulative revenue</div></div>
-              <div><div class="fc-n">11.0x</div><div class="fc-l">blended ROAS</div></div>
+              <div><div class="fc-n">10.6x</div><div class="fc-l">blended ROAS, 2022–2025</div></div>
             </div>
             <a class="fc-link" href="Amazon-Marketplace-Case-Study.html">View Case Study <span class="fc-dot">›</span></a>
           </div>
@@ -623,8 +630,8 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
             <h3><a href="Paid-Media-Case-Study.html">Scaled paid media across four channels without losing efficiency.</a></h3>
             <p class="fc-d">Budget across Meta, Google, Amazon, and Hulu, held to one ROAS bar.</p>
             <div class="fc-stats">
-              <div><div class="fc-n">$2.1M</div><div class="fc-l">ad-attributed sales</div></div>
-              <div><div class="fc-n">16.9x</div><div class="fc-l">peak monthly ROAS</div></div>
+              <div><div class="fc-n">$2.1M</div><div class="fc-l">Amazon ad-attributed sales</div></div>
+              <div><div class="fc-n">16.9x</div><div class="fc-l">peak monthly Amazon ROAS</div></div>
               <div><div class="fc-n">+54%</div><div class="fc-l">Meta ad CTR</div></div>
             </div>
             <a class="fc-link" href="Paid-Media-Case-Study.html">View Case Study <span class="fc-dot">›</span></a>
@@ -721,11 +728,28 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
       </div>
       <div class="exp-cards">
         <div class="exp-card">
-          <span class="exp-card-logo"><img src="images/logo-mdh-sq.png" alt="MDH Beauty logo" /></span>
+          <span class="exp-card-logo mono">KC</span>
           <div>
-            <h3 class="exp-card-role">Fractional Director of Website &amp; Marketing</h3>
-            <div class="exp-card-co">MDH Beauty</div>
-            <p class="exp-card-sub">Leading SEO, brand, and website work for MDH Beauty. Built the brand and voice system, developed the keyword strategy, and stood up GA4 ecommerce tracking and Google Search Console so bookings and search performance became measurable for the first time.</p>
+            <h3 class="exp-card-role">Independent Marketing &amp; Ecommerce Consultant</h3>
+            <div class="exp-card-co">Austin, TX</div>
+            <div class="exp-subs">
+              <div class="exp-sub">
+                <img src="images/logo-jg-sq.png" alt="Jonathan Green logo" />
+                <div>
+                  <h4>Ecommerce Replatforming Consultant</h4>
+                  <div class="m">Jonathan Green (Contract) · 2026 – Now</div>
+                  <p class="exp-card-sub">I'm making the investment case for moving the DTC store to Shopify, covering cost, success metrics and the year-one revenue needed to break even. I also picked the development and SEO agencies and am guiding the move from WooCommerce.</p>
+                </div>
+              </div>
+              <div class="exp-sub">
+                <img src="images/logo-mdh-sq.png" alt="MDH Beauty logo" />
+                <div>
+                  <h4>Fractional Director of Website &amp; Marketing</h4>
+                  <div class="m">MDH Beauty · 2025 – Now</div>
+                  <p class="exp-card-sub">Defined the brand's positioning, messaging and visual identity, and set up its analytics in GA4 and Search Console. Organic clicks grew 8x and CTR rose from 1.8% to 7.6%.</p>
+                </div>
+              </div>
+            </div>
           </div>
           <span class="exp-card-yr">2025 – Now</span>
         </div>
@@ -734,7 +758,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <div>
             <h3 class="exp-card-role">Director of Digital Marketing &amp; E-Commerce</h3>
             <div class="exp-card-co">Jonathan Green</div>
-            <p class="exp-card-sub">Owned DTC, Amazon, and six agency partners, promoted from Manager. Led the site rebuild and its SEO migration side by side.</p>
+            <p class="exp-card-sub">Set growth strategy for a $50M national brand across DTC, Amazon and retail, and led two direct reports, six agencies and a $500K budget. Persuaded the president to take back the Amazon channel and to replace the ecommerce platform. Amazon then grew from $5.4M to $13.3M, and net sales rose 50% in the year after the new site launched.</p>
           </div>
           <span class="exp-card-yr">2022 – 2025</span>
         </div>
@@ -743,7 +767,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <div>
             <h3 class="exp-card-role">Digital Marketing &amp; Website Manager</h3>
             <div class="exp-card-co">Jonathan Green</div>
-            <p class="exp-card-sub">Ran email, paid ads, social, and SEO from the ground up, building the marketing engine behind the DTC storefront's early growth.</p>
+            <p class="exp-card-sub">Repositioned the brand against Scotts with results-led messaging that helped grow DTC sales from $10K to $2.5M. Led the brand's launch into California and ran co-op campaigns with Ace Hardware that grew participating retailers' sales 20.6%.</p>
           </div>
           <span class="exp-card-yr">2019 – 2022</span>
         </div>
@@ -752,18 +776,9 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
           <div>
             <h3 class="exp-card-role">Associate Product Manager, E-Commerce &amp; Internal Tools</h3>
             <div class="exp-card-co">Rocket Lawyer</div>
-            <p class="exp-card-sub">Led 10 engineers, 3 designers, and 2 QA specialists to launch a redesigned catalog, subscriptions, and billing ecosystem.</p>
+            <p class="exp-card-sub">Led a 15-person team of engineers, designers and QA to launch a new ecommerce system covering catalog, subscriptions and billing for a multi-million-dollar subscription business.</p>
           </div>
-          <span class="exp-card-yr">2014 – 2015</span>
-        </div>
-        <div class="exp-card">
-          <span class="exp-card-logo"><img src="images/logo-rl-sq.png" alt="Rocket Lawyer logo" /></span>
-          <div>
-            <h3 class="exp-card-role">Junior Product Manager &amp; Incorporation Specialist</h3>
-            <div class="exp-card-co">Rocket Lawyer</div>
-            <p class="exp-card-sub">Supported internal CRM and e-commerce tooling while advising customers on business formation and compliance.</p>
-          </div>
-          <span class="exp-card-yr">2013 – 2014</span>
+          <span class="exp-card-yr">2013 – 2015</span>
         </div>
       </div>
     </div>
